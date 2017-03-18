@@ -1,72 +1,73 @@
-# Strings
+# சரங்கள்
 
 
-Congratulations! You are halfway through learning the two most fundamental 'blocks' of programming code--Numbers and Strings.
+வாழ்த்துக்கள் குழந்தைகளே! நிரலாக்கத்தின் இன்றியமையாத 'தொகுதிகளான' (blocks) -- எண்கள் மற்றும் சரங்களை கற்றுக்கொள்வதில் பதி அளவு கடந்துவிட்டீர்கள்.
 
-Remember that a string is simply a piece of data (usually words) wrapped in quotes.
+சரங்கள் என்பவை மேற்கோள் குறிகளுக்கு இடையே அமைந்திருக்கும் வெறும் சிறு தகவல் (சில சொற்கள்) என்பதை நினைவில் கொள்ளுங்கள்.
 
-In Ruby, we can perform some math-like operations using our friends, the strings. For example, we can multiply a string like so:
-
-```ruby
-"repeat " * 3
-=> "repeat repeat repeat "
-```
-
-In the above example we have a string: `"repeat "` that we multiply `*` by three. When Ruby performs the `* 3` method it actually just copies the string three times and pastes the result together. Sort of like this:
+ரூபியில், நம் நண்பர்களாக ஆகிவிட்ட சரங்களை கொண்டு கணிதம் போன்ற செயல்பாடுகளையும் செய்யலாம். உதாரணத்திற்கு, சரத்தை இவ்வாறு பெருக்கலாம்:
 
 ```ruby
-"repeat " + "repeat " + "repeat "
-=> "repeat repeat repeat "
+"டொக் " * 3
+=> "டொக் டொக் டொக் "
 ```
 
-In fact, you can write either of these lines of code and the result will be the same. Much in the same way that writing `3 + 3 + 3 = 9` yields the same result as `3 * 3 = 9`. When the computer adds strings together we call it concatenation.
+மேல் குறிப்பிட்டுள்ள உதாரணத்தில்: `"டொக் "` மும்முறை பெருக்கப்படுகிறது `*`. ரூபி `* 3` என்பதை செயல்படுத்தும் போது, அது உண்மையில் அந்த சரத்தை மும்முறை ஒன்றாக இவ்வாறு சேர்க்கிறது:
 
 ```ruby
-"Cat and " + "Dog"
-=> "Cat and Dog"
+"டொக் " + "டொக் " + "டொக் "
+=> "டொக் டொக் டொக் "
 ```
 
-In the example above, there are two strings, one is `"Cat and "` and the second string is `"Dog"`. By giving the command to add the two strings `+`, we are able to join both strings together using the magic of concatenation. (Concatenation is just a fancy old Latin word for join together).
+குறிப்பாக, பின்வருபவற்றில் நீங்கள் எந்த வகையில் எழுதினாலும் ஒரே முடிவுதான் கிட்டும். `3 + 3 + 3 = 9` என்பதும் `3 * 3 = 9` ஒரே விடையை தரும் அல்லவா, அதே போல் தான். இவ்வாறு, கணினி சரங்களை ஒன்றாக கூட்டுவதை, நாம் 'ஒட்டு' என்கிறோம்.
+
+```ruby
+"ஆமை மற்றும் " + "முயல்"
+=> "ஆமை மற்றும் முயல்"
+```
+
+மேல் குறிப்பிட்டுள்ள உதாரணத்தில், இரு சரங்கள் உள்ளன, முதலாவது `"ஆமை மற்றும் "`, இரண்டாவது `"முயல்"`. இவ்வாறு இரண்டு சரங்களையும் சேர்க்க கட்டளை பிறப்பிப்பதனால் `+`, நம்மால் அவ்விரு சரங்களையும் 'ஒட்டு' எனும் மந்திரத்தால் சேர்க்க முடிகிறது. இதை ஆங்கிலத்தில் 'கண்காடினேஷன்' (concatenation) என்பார்கள். கண்காடினேஷன் என்பது ஒட்டு என்பதன் லத்தீன் மொழிச் சொல் ஆகும்.
 
 ![Art by Vixuong Hong](http://rubykin.com/images/cat-dog.png)
 
-Ready to try it out?
+முயன்று பார்ப்போமா?
 
-Open Terminal again (or http://repl.it/languages/Ruby) and try multiplying and adding a few strings yourself to get the hang of it.
+மீண்டும் முனையத்தை (terminal) திறந்து (அல்லது http://repl.it/languages/Ruby) சில சரங்களை கொண்டு கூட்டல், பெருக்கல் செய்து பழகிப் பாருங்கள்.
 
-Now try adding a number with a string. It didn’t work did it? Remember that joker `"9"` string from our previous example in chapter one? Ruby doesn’t see this as the actual number 9, instead it sees a string.
+இனி ஓர் எண்ணையும், ஓர் சரத்தையும் கூட்டல் செய்து பார்க்கலாம். அது வேலை செய்யவில்லை சரிதானே? முந்தைய பாடம் ஒன்றில் நாம் பார்த்த கோமாளி சரம் `"9"` நினைவில் இருக்கிறதா? ரூபி அதை எண் `9` என கணக்கில் கொள்ளாது. மாறாக, மேற்கோள் குறிகளுக்குள் இருப்பதால் அதை `"9"` சரம் என்றே எடுத்துக் கொள்ளும்.
 
-To Ruby, anything that is inside the quote isn’t just a word or a number anymore. Everything inside the quotes is a string. So when we try to add a string with a number, Ruby gives us an error:
-
+ரூபியை பொறுத்தமட்டில், மேற்கோள் குறிகளுக்குள் இருக்கும் எதுவும் சொல்லோ, எண்ணோ அல்ல. அவற்றுள் இருக்கும் அனைத்தும் சரங்கள் மட்டுமே. எனவே, ஒரு சரத்தை ஒரு எண்ணோடு கூட்ட முற்பட்டால், ரூபி அது பிழை என்று நமக்கு பதிலளிக்கும்:
 
 ```
 "9" + 9
 => TypeError: can't convert Fixnum into String
 ```
+(இதில் String என்பது சரத்தை குறிக்கும்.)
 
-In the above example, we would see `"9" + 9` and think the answer is 18. But Ruby doesn’t see it like that. Ruby sees `"STRING" + NUMBER`. And you can't add strings and numbers, because they are different _types_ of data.
+மேல் குறிப்பிட்டுள்ள உதாரணத்தில், `"9" + 9` என்பதற்கான விடை 18 என நாம் கருத வாய்ப்பு உண்டு. ஆனால், ரூபி அவ்வாறு கருதாது. ரூபி அதை `"சரம்" + எண்` என தான் கருதும். நாம் ஒருபோதும் சரங்களையும், எண்களையும் ஒன்றாக கூட்ட முடியாது. ஏனெனில், அவை இரு வேறு _உள்ளீடு வகைகள்_ (types) ஆகும்.
 
-This doesn’t mean we can’t do this sort of equation, it just means we need to use a trick to make sure Ruby understands what we want. Of course, there are lots of interesting methods or _actions_ we can perform to get Ruby to do what we want.
+அப்படியானால், இதுபோன்ற சமன்பாடுகளை நாம் ரூபியில் இயக்க முடியாது என்பது பொருள் அன்று. அதன் பொருள் என்னவென்றால், ரூபி நாம் சொல்வதை புரிந்து கொள்ளும் விதமாக நாம் சில தந்திரங்களை செய்ய வேண்டும் என்பதாகும். அதற்கு சில சுவாரசியமான வழிமுறைகள் (methods) அல்லது _செயல்கள்_ (actions) ரூபி மொழியில் உள்ளன.
 
-We’ll look at some of those _actions_ a bit later, but for now, you could solve the above problem by using the _to integer_ method, or `to_i`. This would convert the string to a number (more specifically, an integer). And with two numbers, Ruby can do the math:
+அவ்வாறான சில _செயல்களை_ பின்னர் பார்க்கலாம். ஆனால், தற்போது, _to integer_ அல்லாது `to_i` என்பதையும் பயன்படுத்தி இந்த சிக்கலை தீர்த்துவிடலாம். இந்த வழிமுறை சரத்தை எண்ணாக மாற்றிவிடும் (குறிப்பாக முளு எண்ணாக). இனி, இந்த இரு எண்களை கொண்டு ரூபியால் கணித சமன்பாடுகளை செய்ய முடியும்:
 
 ```ruby
 "9".to_i + 9
 => 18
 ```
 
-Remember those `\n` characters from the first chapter? This is what the computer uses to note a _new line_ in your string. So the following string:
+முதல் பாடத்தில் நாம் படித்த `\n` நினைவில் உள்ளதா? இதை உங்கள் சரத்தில் செர்த்துக் கொண்டால், சேர்த்த இடத்தில் ஒரு புது வரியை உள்ளிட வேண்டும் என ரூபி புரிந்து கொள்ளும். அப்படியானால், பின்வரும் சரம்:
 
 ```ruby
-print "One line.\nAnother line.\nAnd another.\n"
+print "முதல் வரி.\nமற்றொரு வரி.\nமற்றுமொரு வரி.\n"
 ```
-Would print like this:
+இவ்வாறாக பதிக்கப்படும்:
 
 ```
-One line.
-Another line.
-And another.
+முதல் வரி.
+மற்றொரு வரி.
+மற்றுமொரு வரி.
 ```
-In this way, Ruby can store sentences or even whole files inside just one string. Now that you have a better understanding of strings, check out some examples below.
+
+இவ்வழியை பயன்படுத்தி, ரூபியால், ஒரேயொரு சரத்தில் ஒரு வாக்கியத்தையோ, ஒரு முழு கோப்பையோ (file) கூட சேமித்துவிட முடியும். தற்போது உங்களுக்கு சரங்கள் பற்றி ஓரளவு தெரிந்துவிட்டபடியால், பின்வரும் எடுத்துக் காட்டுகளை முயற்சி செய்து பாருங்கள்.
 
 <div style="height:30px;"></div>
