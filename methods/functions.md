@@ -1,43 +1,43 @@
-# Methods
+# நிரல்பாகங்கள்
 
 
-A big part of programming is simply breaking down large problems into smaller and smaller instructions that can work together to create a solution. Let’s think of this using a real world example. Imagine you are playing baseball and its your turn to bat. This critical moment when you swing and hit the ball for a home run can be seen as many smaller moments that led to the big play.
+நிரலாக்கலில் பெரும் பகுதி என்பது, ஒரு பெருநிரலை ஒன்று சேர்ந்து இயங்கக்கூடிய, கட்டளைகளை சின்னஞ்சிறு பகுதிகளாக பிரிப்பது தான். இதைப்பற்றி புரிந்து கொள்ள, சராசரி வாழ்வில் நாம் காணும் நிகழ்வுகளுடன் ஒப்பிட்டுப் பார்ப்போம். உதாரணத்திற்கு நாம் கிரிக்கெட் விளையாடுவதாக கற்பனை செய்து கொள்வோம். மைதானத்திற்கு வெளியே நீங்கள் பந்தை விரட்டி அடிக்கும் பரபரப்பான தருணத்தை நீங்கள் அடைவதற்கு காரணம், நீங்கள் களமிறங்கியது முதல் கிடைத்த நேரத்தை சிறு சிறு பகுதிகளாக பிரித்து உங்களை தயார் படுத்திக் கொண்டது தான்.
 
-First you picked up a bat. Then you took a few practices swings. Then you walked up to the plate, you readied your stance, looked at the pitcher. Finally, you took a breath and swung! Each of these small steps can be seen as methods (small chunks of instructions) that you gave to your body to get a home run.
+முதலில் மட்டையை கையில் எடுத்திருப்பீர்கள். ஓரிரு முறை மட்டையை வீசி பயிற்சி செய்திருப்பீர்கள். பின்னர், ஆடுகளத்தை நோக்கி நகர்ந்து, தயார் நிலைக்கு வந்து, பந்துவீச்சாளரை நோக்கி கவனத்தை செலுத்தியிருப்பீர்கள். இறுதியாக உள்மூச்செடுத்து பந்தை அடித்திருப்பீர்கள். இவ்வாறாகிய உங்கள் ஒவ்வொரு அசைவும் விளையாட்டின் பாகங்கள் (விளையாடுவதற்கான சிறு நெறிமுறைகள்). இவை தான் உங்களை சிறப்பான ஆட்டத்திற்கு தயார் செய்யும்.
 
-We can look at this another way. When you play a video game and reach a new level, there may actually be _real_ methods that are called by the game. Perhaps the game contains a `life_count` method that counts how many lives you have left. Another method could tally up your current score. A third method may calculate your character's current state of health. Each of these methods would take input from your actions in the game, and go back and get information from the program to keep everything updated and accurate.
+இதை வேறு விதமாகவும் புரிந்து கொள்ளலாம். நீங்கள் காணொளி விளையாட்டில் புதிய உயர் நிலையை அடையும் போது, அந்த விளையாட்டில் உள்ள _மெய்யான_ நிரல்பாகங்கள் அழைக்கப்படலாம். மேலும், அந்த விளையாட்டில் உள்ள `உயிர்_வாய்ப்புகள்` எனும் நிரல்பாகம், நமக்கு விளையாட எத்தனை வாய்ப்புகள் உள்ளன என்பதை காட்டும். வேறொரு நிரல்பாகம், நமது மொத்த மதிப்பெண்களை காண்பிக்கும். மற்றுமொன்று உங்களது மீதமுள்ள ஆயுளின் நலத்தை காண்பிக்கும். இதில் உள்ள அனைத்து நிரல்பாகங்களும், விளையாட்டில் உங்கள் செய்கைகளை கவனித்து உள்ளீடு (input) பெற்றுக் கொள்ளும். பின்னர், மற்ற நிரல்களை அணுகி தகவல்களை சேகரித்து, புதுப்பித்து சரியாக நமக்கு வழங்கும்.
 
-To understand methods a little better, let’s jump into writing one ourselves. Here’s a very simple method you can write yourself that merely puts information to the screen. You can write a method inside IRB without creating a new file. You can use the online version as well at repl.it/languages/Ruby. Just write your code on the left side and hit the play button to run it.
+நாமே ஒரு நிரல்பாகத்தை எழுதினால், அதைப்பற்றி இன்னும் சிறப்பாக நம்மால் புரிந்து கொள்ள முடியும். கீழே, சிறு தகவலை மட்டும் திரையில் காட்டும் ஓர் எளிய நிரல்பாகம் கொடுக்கப்பட்டுள்ளது. ஐஆர்பி-யின் (IRB) உள்ளே நாம் ஒரு நிரல்பாகத்தை எழுதிவிட முடியும், அதற்கு புதியொரு கோப்பை (file) உருவாக்க வேண்டியதில்லை. repl.it/languages/Ruby என்ற இணையதள முகவரிக்கு சென்றும் நாம் நிரல்பாகங்களை எழுதலாம். நிரல்பாகத்தை இடதுவசம் உள்ள பிரிவில் எழுதிவிட்டு, நிரலை ஓடவிட பொத்தானை அழுத்துங்கள்.
 
-In your terminal type irb:
+முனையத்தில் பின்வருமாறு தட்டச்சு செய்யுங்கள்:
 
 ```ruby
-  $ irb   # type irb to open the ruby interpreter
+  $ irb   # ரூபி மொழிமாற்றியை (nterpreter) திறக்க irb என தட்டச்சு செய்யுங்கள்
 irb(main):001:0> def hello
-irb(main):002:1> puts "Hello World!"
+irb(main):002:1> puts "நல்வரவு!"
 irb(main):003:1> end
 => nil
 ```
 
-In Ruby, we define a method using the `def` keyword. The next word after def is the name of our method. This would be our _hello_ method, which takes no arguments (kind of like your parents at bedtime). We’ll explain arguments in a moment.
+ரூபியில் நாம் நிரல்பாகத்தை, `def` என்ற பதிப்புச்சொல்லால் (keyword) உருவாக்குகிறோம். நிரல்பாகத்தின் பெயர் def என்ற சொல்லுக்கு பின் வரவேண்டும். இதுதான் நம் _hello_ நிரல்பாகம், இவை எத்த உள்ளீடுகளையும் பெறவில்லை (அலுவலகம் செல்லும் போது, பெற்றோர்கள் உங்களை அழைத்துச் செல்ல மாட்டார்கள் அல்லவா, அது போலத்தான்). நிரல்பாகத்தின் உள்ளீடுகளைப் பற்றி இன்னும் சற்று நேரத்தில் பார்க்கலாம்.
 
-Like at the end of a movie or bedtime story, the word `end` in Ruby means the same thing as it does to you--that this is the _end_ of our method. Any code in between our def and end keywords will be run by the computer for this particular method. This code is our "block" we give the method to execute.
+திரைப்படத்தின் இறுதியிலோ, தாத்தா பாட்டி சொல்லும் கதைகளிலோ வரும் _முற்றும்_ என்ற வார்த்தை போலவே, ரூபி மொழியின் நிரல்பாகத்தில் வரும் `end` எனும் வார்த்தை, அதன் முடிவை குறிக்கும். def மற்றும் end என்ற பதிப்புசொற்களுக்கு (keywords) இடையில் உள்ள நிரல்களை, கணினி இந்த நிரல்பாகத்தின் பகுதியாக இயக்கும். இந்த நிரல்வரிகள் தான் நிரல்பாகத்திற்கு இயங்க "தொகுப்பாக" நாம் வழங்குவதாகும்.
 
-In order to write and save several methods, it will be easier to create a file and run the code inside the file, so let’s do that. Exit the terminal by typing `exit`.
+பல்வேறு நிரல்பாகங்களை நாம் ஒருசேர எழுதி இயக்குவதற்கு, அவற்றை ஒரு கோப்பில் சேமித்து இயக்குவதே எளிமையானதாக இருக்கும். அதனா;ல், தற்போது முனையத்திலிருந்து வெளியேற `exit` என்ற சொல்லை தட்டச்சு செய்யுங்கள்.
 
-Open up a text editor. I like using Sublime Text, but you can use any kind. There are several free text editors for download online. Or you can use repl.it without saving.
+உரை தொகுப்பியை (text editor) திறந்து கொள்ளுங்கள். எனக்கு ஸப்லைம் டெக்ஸ்ட் (Sublime Text) என்னும் தொகுப்பி பிடித்தமானது என்பதால், அதை பயன்படுத்துகிறேன். ஆனான், நீங்கள் வேறெது வேண்டுமானாலும் பயன்படுத்தலாம். பல்வேறு வகையான தொகுப்பிகள் இணயத்திலிருந்து இலவசமாக பதிவிறக்கம் செய்யும்படியாக கிடைக்கின்றன. இவை எதுவும் வேண்டாம் என்றாலும், நீங்கள் repl.it இணையதளத்தை பயன்படுத்திக் கொள்ளலாம். ஆனால், அதில் நிரல்களை சேமித்து வைக்க இயலாது.
 
-Create a new file and type in the method we wrote above.
+ஒரு புதிய கோப்பை உருவாக்கி, மேலே நாம் பார்த்த நிரல்பாகங்களை தட்டச்சு செய்யுங்கள்.
 
 ```ruby
 def hello
-  puts "Hello World!"
+  puts "நல்வரவு!"
 end
 ```
 
-Save this file as `hello.rb` to your desktop. Now you can run this file from your terminal. In your terminal, navigate to the Desktop directory using `cd`, the change directory command.
+இந்த கோப்பை `hello.rb` என்று மேசைதளத்தில் செமித்துக் கொள்ளுங்கள். இனி இந்த கோப்பை நீங்கள் முனையத்திலிருந்து இயக்கிக் கொள்ளலாம். முனையத்தில் `cd` (change directory) கட்டளையை இயக்கி மேசைதளத்திற்கு செல்லுங்கள்.
 
-If you don’t know how to find your file from the terminal console, I can help you with a simple trick. Just type the following. (This will take you to your root folder and then to your desktop).
+நீங்கள் சேமித்த கோப்பை முனையத்தில் கண்டுபிடிக்க முடியவில்லை என்றால் கலங்க வேண்டாம், நான் உங்களுக்கு ஒரு எளிய வழி கற்றுத்தருகிறேன். பின்வருமாறு முனையத்தில் தட்டச்சு செய்யுங்கள். (இது உங்களை இல்ல அடைவிக்கு அதாவது home folder அழைத்துச் சென்று பின்னர் மேசைதளாத்திற்கு கொண்டு செல்லும்)
 
 ```
 Your-Computer-Name:$ cd
@@ -45,36 +45,36 @@ Your-Computer-Name:$ cd ~/Desktop
 Your-Computer-Name:Desktop $
 ```
 
-Now that we are in the Desktop directory, where our hello.rb file is stored, we can run our Ruby file using the ruby command! Type `ruby hello.rb` into the console. It may look something like this.
+நாம் தற்போது மேசைதள அடைவில் இருப்பதால், நாம் hello.rb நிரலை ruby கட்டளையை பயன்படுத்தி இயக்கலாம்! முனையத்தில், `ruby hello.rb` என்று தட்டச்சு செய்யுங்கள். அது பின்வருமாறு இருக்கும்.
 
 ```
 Your-Computer-Name:Desktop $ ruby hello.rb
 Your-Computer-Name:Desktop $
 ```
 
-If you had no errors and no output, then your program ran as expected. Great job!
+திரையில் பிழைகள் எதுவும் தோன்றாவிட்டால், உங்கள் நிரல் வெற்றிகரமாக இயக்கப் பட்டது என்பது பொருள். வாழ்த்துக்கள்!
 
-But wait, why didn’t it put "Hello World!" to the screen? Well, this is because our hello method was not _called_. We simply ran a program that contained our hello method, but we didn’t specifically _call_ upon that method to be run by the computer. We can fix this by updating our hello.rb file.
+கொஞ்சம் பொறுங்கள், "நல்வரவு!" என்பது ஏன் திரையில் தோன்றவில்லை? ஏனெனின், hello நிரல்பாகத்தை நாம் _அழைக்கவில்லை_. நாம் வெறுமனே hello நிரல்பாகம் உள்ள நிரலை இயக்கினோமே தவிர, அந்த நிரல்பாகம் கணினியால் இயக்கப்படுவதற்கு அதனை அழைக்காமல் விட்டுவிட்டோம். hello.rb நிரலின் சில மாற்றங்களை செய்து, அதை நாம் எளிதாக சரிசெய்து விடலாம்.
 
 ```ruby
 def hello
-  puts "Hello World!"
+  puts "நல்வரவு!"
 end
 
 hello()
 ```
 
-Now when we run hello.rb, our hello method is called on line 5. We call a method by simply writing the name of the method. The parenthesis are optional, because this method has no arguments. If there were arguments, or inputs into our method, we would put them inside the parenthesis. Now when we run our program, we should see output like this:
+இனி hello.rb கோப்பு இயக்கப்படும் போது, hello நிரல்பாகமானது ஐந்தாவது வரியில் இயங்கும். இந்த நிரல்பாகத்தை அழைக்க, அதன் பெயரை மட்டும் எழுதினால் போதுமானது. இந்த நிரல்பாகத்திற்கு உள்ளீடுகள் ஏதும் இல்லை என்பதால், அடைப்புக்குறிகள் சேர்க்கவேண்டியது கட்டாயமில்லை. உள்ளீடுகள் இருக்குமேயானால், அவற்றை நிரல்பாகத்தின் பெயருக்கு பின்பாக அடைப்புக்குறிக்குள் கொடுக்க வேண்டும். இனி நாம் நிரலை இயக்கினால் பின்வரும் வெளியீடு நமக்கு கிடைக்கும்:
 
 ```ruby
 Your-Computer-Name:$ ruby hello.rb
-Hello World!
+நல்வரவு!
 Your-Computer-Name:$
 ```
 
-Congratulations! You just ran your first Ruby program with its very own method. It ran successfully and outputted "Hello World!" to the screen using Ruby’s built in `puts` method.
+வாழ்த்துக்கள்! நிரல்பாகத்தை பயன்படுத்தி உங்கள் முதல் நிரலை நீங்கள் எழுதிவிட்டீர்கள். அது `puts` என்ற ரூபியின் உள் நிரல்பாகத்தை பயன்படுத்தி, வெற்றிகரமாக இயங்கி, "நல்வரவு!" என்ற வெளியீட்டை நமக்கு திரையில் அளித்துள்ளது.
 
-Now let’s try writing a method that takes an argument. What if we want to multiply any two numbers together using our own method. We could write something like this.
+இனி உள்ளீடு பெறும் ஒரு நிரல்பாகத்தை எழுதலாம். நம் நிரல்பாகத்தை உபயோகித்து இரு எண்களை பெருக்க வேண்டும் என் வைத்துக் கொள்வோம். அதை நாம் பின்வருமாறு எழுதலாம்.
 
 ```ruby
 def multiply(num1,num2)
@@ -82,7 +82,7 @@ def multiply(num1,num2)
 end
 ```
 
-We define our method as multiply and _pass in_ two arguments using parenthesis (num1 and num2). Then we can simply use Ruby’s multiply operator (the * method) on both numbers. The result is returned since it is the last line in our method. (In Ruby, the last line of a method is returned by default.)
+அடைப்புகுறி பயன்படுத்தி இரு எண்களை (num1 and num2) _உள்ளீடு செய்யுமாறு_, multiply எனும் பெயர் சூட்டி நாம் நிரல்பாகத்தை எழுதலாம். அதன்பின் நாம் இலகுவாக ரூபியின் பெருக்கல் குறியை ( * ) இரு எண்களிலும் பயன்ன்படுத்தலாம். ரூபியில் இயல்பாக, ஒரு நிரல்பாகத்தின் இறுது கட்டளையின் விடை திரையில் வெளியீடு செய்யப்படும். அதனால், நாம் எழுதிய நிரல்பாகத்தின் இறுதி கட்டளையின் விடை வெளியீடு செய்யப்பட்டுள்ளது.
 
 ```ruby
 multiply(2,3)
@@ -91,52 +91,52 @@ multiply(2,3)
 multiply(4,2)
 => 8
 
-multiply("Hi",3)
-=> "HiHiHi"
+multiply("டிக்",3)
+=> "டிக்டிக்டிக்"
 ```
 
-Uh oh, looks like our method can multiply more than numbers! We can modify our code to ensure our users enter numbers, but let’s not worry about that now. How about another way to use arguments for a method. What if we want to calculate how many days old we are?
+பார்க்கப்போனால், நாம் எழுதிய நிரல்பாகம் எண்கள் மட்டும் அல்லாது சரங்களையும் பெருக்கும் வல்லமை உள்ளது போலும்! நம் நிரலில் சில மாற்றங்களை செய்து, எண்களை மட்டும் உள்ளீடு செய்ய அனுமதிக்கும்படி செய்துவிடலாம். ஆனால், அதைப் பற்றி நாம் இப்போது கவலைப்பட வேண்டாம். நமது, வயதை நாட்களில் கணக்கிடும் படியாக ஒரு புது உதாரணத்தை பார்க்கலாமா?
 
 ```ruby
 def years_to_days_old(years)
   result = years * 365
-  puts "You are #{result} days old!"
+  puts "உங்கள் வயது #{result} நாட்கள் ஆகும்!"
 end
 ```
 
-Let's go over the method we wrote above. First, our method name is set to `years_to_days_old`. It takes one argument as input, stored in the variable `years`. The first line of our method creates a new variable `result` and assigns it the value of our passed-in argument `years`, multiplied by 365. This gives us the number of days per years. We then simply put the string "You are x days old!" to the screen, where x is our `result` variable.
+மேல் குறிப்பிட்ட உதாரணத்தை சிறிது விளக்கமாக பார்க்கலாம். முதலாவதாக, நம் நிரல்பாகத்தின் பெயரை `years_to_days_old` என்று மாற்றியுள்ளோம். இது `years` என்னும் ஒரேயொரு மாறி / மாறினி (variable) மட்டும் பெற்றுக் கொள்கிறது. நம் நிரல்பாகத்தின் முதல் வரி, `result` என்றொரு மாறினியை உருவாக்கி, அதில் நாம் உள்ளீடு செய்த `years` என்பதன் மதிப்பை 365-ஆல் பெருக்கி, அந்த பெருக்கல் மதிப்பை சேமிக்கிறது. இது நாம் உள்ளீடு செய்த ஆண்டுகளில் எத்தனை நாட்கள் உள்ளன என்பதை நமக்கு தெரிவிக்கும். பின்பு நாம் "உங்கள் வயது x நாட்கள் ஆகும்!" என்னும் சரத்தின் வாயிலாக விடையை திரையில் வெளியீடு செய்கிறோம். இதில் x என்பது நம் விடையை குறிக்கும்.
 
-Here's what it might look like if we call the method and pass in 10 years as the input.
+நம் நிரல்பாகத்திற்கு 10 ஆண்டுகள் என உள்ளீடு செய்தால் அது பின்வருமாறு இருக்கும்.
 
 ```
 years_to_days_old(10)
-You are 3650 days old!
+உங்கள் வயது 3650 நாட்கள் ஆகும்!
 => nil
 ```
 
-Our puts method outputs the string, using interpolation the `#{ }` part to display the result in our answer string. String interpolation is when Ruby allows a piece code to exist inside a string. This can be a variable or even math, written with a pound sign and curly braces `#{ }`. Here are some examples to get the idea.
+puts நிரல்பாகம், நம் விடையை தருவதற்கு சரத்தினுள் உள்ள இடைச்செருகலை (interpolation) `#{ }` பயன்படுத்துகிறது. ரூபி, சரத்தினுள் சிறு நிரலை பயன்படுத்த வழங்கும் முறையை தான் நாம் இடைச்செருகல் (interpolation) என்கிறோம். அது ஒரு மாறினியாகவோ, `#{ }` என்பதற்குள் இருக்கும் கணித சமன்பாடாகவோ இருக்கலாம். இதோ, கீழே சில உதாரணங்கள்.
 
 ```ruby
 x = 15
-puts "This string has the #{x} variable inside."
-=> This string has the 15 variable inside.
+puts "இதனுள் #{x} மாறினி உள்ளது."
+=> இதனுள் 15 மாறினி உள்ளது.
 
-puts "This one is doing math: #{x + 5}"
-=> puts This one is doing math: 20
+puts "இது சமன்பாட்டை கணிக்கிறது: #{x + 5}"
+=> puts இது சமன்பாட்டை கணிக்கிறது: 20
 ```
 
-We could add more functionality to the `years_to_days_old` method and remove the argument input. If we use Ruby’s `gets` method we can capture the input from a user’s response. We call chomp to remove (or chomp and eat) the new line character like we did in a previous chapter. The `to_i` method turns the user’s string input into an integer. Our method might look something like this.
+நாம் `years_to_days_old` நிரல்பாகத்தில் வேறு சில கட்டளைகளை சேர்த்துவிட்டு, அதன் உள்ளீடை நீக்கி விடலாம். நாம் ரூபியின் `gets` நிரல்பாகத்தை பயன்படுத்தினால், பயனரிடமிருந்தே நேரடியாக உள்ளீடு பெற்றுவிடலாம். நாம் முந்தய பாடத்தில் செய்தது போல், chomp பயன்படுத்தி, புது வரியை (new line character) நீக்கிவிடலாம். `to_i` நிரல்பாகமானது நாம் உள்ளீடு செய்யும் சரத்தை எண்ணாக மற்றிவிடும். நாம் மாற்றம் செய்த நிரல்பாகம் பின்வருவது போல் காட்சியளிக்கும்.
 
 ```ruby
 1. def years_to_days_old
-2.   puts "How old are you in years?"
+2.   puts "தாங்கள் வயதை உள்ளீடு செய்யவும்!"
 3.   years = gets.chomp.to_i
 4.   days = 365 * years
-5.   puts "You are #{days} days old!"
+5.   puts "உங்கள் வயது #{days} நாட்கள்!"
 6. end
 ```
 
-Let’s run this from our IRB terminal. First, save the code above in a file called `age_in_days.rb` and place this in your desktop or your project folder. Now, when you open up your terminal or console, navigate to this folder and type `irb` in the command line. There, you can load the file and call the method by typing it. Here’s an example below.
+இனி நாம் இதை IRB முனையத்தில் இயக்கி பார்க்கலாம். முதலாவதாக, இந்த நிரலை `age_in_days.rb` என்ற கோப்பில் சேமித்து, அதை மேசைதள அடைவிலோ, வேறு அடைவிலோ வைத்து விடுங்கள். இனி நீங்கள் முனையத்தை திறக்கும்போது, தாங்கள் சேமித்த கோப்பின் அடைவிற்கு சென்று `irb` என தட்டச்சு செய்யுங்கள். இனி நீங்கள் பின்வருமாறு உங்களது நிரலை இயக்கலாம்.
 
 ```
 /Documents/Ruby/my_code_folder >
@@ -144,9 +144,9 @@ Let’s run this from our IRB terminal. First, save the code above in a file cal
 >> load 'age_in_days.rb'
 => true
 >> years_to_days_old
-How old are you in years?
+தாங்கள் வயதை உள்ளீடு செய்யவும்?
 ```
 
-Now that you have a basic understanding of methods, see if you can write one yourself. You could write an adventure word game or create your own calculator. The best way to get started is to just experiment!
+தற்போது நீங்கள் நிரல்பாகம் குறித்த அடிப்படை அறிவை பெற்றிருப்பீர்கள், இனி தானாக ஒரு நிரல்பாகத்தை எழுதி பாருங்கள். ஒரு சொல் விளையாட்டோ, அல்லது கணிப்பானையோ (calculator) எழுத முயன்று பார்க்கலாம். தானாக முயன்று பார்ப்பது நல்ல தொடக்கமாக அமையும்!
 
 <div style="height:30px;"></div>
