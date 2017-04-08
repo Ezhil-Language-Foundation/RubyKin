@@ -1,41 +1,41 @@
-# Files
+# கோப்புகள் (Files)
 
 
-__Understanding the In’s and Out’s__
+__முழு புரிதல்__
 
-So far we’ve learned a lot about the basics of programming in Ruby. We’ve learned about strings, numbers, variables, collections and methods--core concepts to all programming languages. These are the building blocks to programming. Understanding these basics will help you with Ruby and any other languages you may learn in the future.
+இதுவரை, நாம் ரூபி மொழியின் அடிப்படைகள் பலவற்றை கற்றுக்கொண்டோம். எந்த ஒரு நிரல் மொழிக்கும், நாம் கற்றுக்கொண்ட சரங்கள், எண்கள், மாறினிகள், தரவமைப்புகள் மற்றும் நிரல்பாகங்கள் மிக மிக முக்கியமானவை. இவைகள் தாம் நிரல்களின் சின்னஞ்சிறு கட்டமைப்புகள் ஆகும். ரூபியையோ வெறு நிரல் மொழிகளையோ கற்றுக் கொள்வதற்கு பிற்காலத்தில் இவை உங்களுக்கு பயன்படும்.
 
-But there is one more aspect we should cover so you can start writing your own programs. So far we have modified strings and numbers with input and output from our console. But what if we wanted to manipulate entire files instead?
+நீங்கள் நிரல்கள் எழுத துவங்குவதற்கு முன் மேலும் ஒன்றை கற்க வேண்டி உள்ளது. இதுவரை நாம் சரங்களையும் எண்களையும் திருத்தவும், மாற்றங்கள் செய்யவும் முனையத்தை தான் பயன்படுத்தினோம். ஆனால், கோப்பில் நாம் நேரடியாக மாற்றம் செய்ய வேண்டுமாயின்?
 
-We can start interacting with files using Ruby’s File Class. Here’s what it would look like to create, open and write to a file.
+கொப்புகளோடு நாம் தொடர்பு ஏர்படுத்திக் கொள்ள, ரூபியின் File வகுப்பை (File Class) நாம் உபயோகிக்க வேண்டும். கோப்புகளை உருவாக்கி, திறந்து, தகவல்களை சேமிப்பதற்கான நிரல் பின்வருமாறு தோற்றமளிக்கும்.
 
 ```ruby
 the_file = File.open("my_file.txt", "w")
-the_file.puts "First line of our file."
+the_file.puts "கோப்பின் முதல் வரி."
 the_file.close
 ```
 
-In the example above, we used the File class and the `open` method, sending in two parameters. The first, `my_file.txt` is the name of our file we are creating. The second is the `w` option, which tells Ruby we want to write to our file. On our next line we use puts to write a string of text to our file. Lastly, we close the file with the `close` method.
+மேலுள்ள எடுத்துக்காட்டில், File வகுப்பையும் `open` நிரல்பாகத்தையும் பயன்படுத்தி அதற்கு இரு உள்ளீடுகளை அனுப்பியுள்ளோம். அந்த உள்ளீடுகளில் முதலாவதானது, `my_file.txt`, இது நாம் உருவாக்கப்போகும் கோப்பின் பெயர் ஆகும். இரண்டாவது உள்ளீடு, `w`. இது, நாம் கோப்பில் தகவல்களை எழுத போகிறோம் என்னும் செய்தியை ரூபிக்கு தெரிவிக்கும். அடுத்த வரியில் உள்ள `puts`, நாம் அளிக்கும் சரங்களை கோப்பினுள் எழுதும். இறுதியாக, `close` நிரல்பாகத்தை பயன்படுத்தி நாம் கோப்பை மூடிவிடுகிறோம்.
 
-If you open up a terminal window and enter Ruby’s Interactive Shell (IRB), you can run each of the lines of code above. To see your file, type `exit` to leave the Ruby shell and type `ls` to list your files. You should see `my_file.txt` in your directory. Type `open my_file.txt` , to open your file and see the line we wrote earlier with the puts statement.
+நீங்கள்  முனையத்தை திறந்து ரூபியின் 'Interactive Shell (IRB)'-ற்கு சென்றால், மேல் குறிப்பிட்டுள்ள கட்டளைகள் அனைத்தையும் இயக்கலாம். IRB-ல் உள்ளபோது, உங்கள் கோப்பை காண்பதற்கு `exit` என்று தட்டச்சு செய்து வெளியேறி விட்டு, பின்பு `ls` என தட்டச்சு செய்யுங்கள். இது உங்கள் அனைத்து கோப்புகளையும் பட்டியலிட்டு காண்பிக்கும். அதில் `my_file.txt` இடம் பெற்றிருப்பதை நீங்கள் காண்பீர்கள். இனி `open my_file.txt` என தட்டச்சு செய்தால், உங்கள் கோப்பு திறக்கும்.
 
-If we want to add to this file, we could use the same code above, but with the append `'a'` parameter passed in as the second argument to open. If we used `w`, we would overwrite all of the contents of our file. If we use the `'a'` parameter we can add to our file without overwriting it.
+இனி இந்த கோப்பில் நாம் மாற்றம் செய்ய வேண்டுமானால், மேல் குறிப்பிட்டுள்ள அதே நிரலில், கோப்பை திறப்பதற்கான open கட்டளையின் இரண்டாம் உள்ளீடாக `'a'` பயன்படுத்த வேண்டும். இதற்கு பதிலாக நாம் `w` பயன்படுத்தினால், கோப்பில் உள்ள தகவல்களை அழிக்கப்பட்டு முதலிலிருந்து எழுதப்படும். நாம் `'a'` பயன்படுத்துவதன் மூலம், கோப்பில் முன்னிருந்த தகவல்களுக்கு கீழ் புதிய தகவல்கள் சேமிக்கப்படும்.
 
-Now, if we wanted to read our file, there are two basic ways for us to do that. We could either read all of the lines of the file at once, or one at a time. Here’s how to read the file using the `'r'` option. The `'r'` option stands for read only.
+நாம் கோப்பில் உள்ள தகவக்களை படிக்க வேண்டுமானால், அதற்கு இரு வழிமுறைகள் உள்ளன. முதலாவது நாம் கோப்பில் உள்ள அனைத்து தகவல்களையும் ஒருசேர படிக்கலாம், அல்லது ஒவ்வொரு வரியாக படிக்கலாம். நாம் பின்வருமாறு `'r'` உள்ளீடை பயன்படுத்தி கோப்புகளை படிக்கலாம். `'r'` என்பது நாம் கோப்பை படிக்க போகிறோம் என்பதற்கான குறியீடாகும்.
 
 ```ruby
 file = File.open("our_file.txt", "r")
 entire_file = file.read
 puts entire_file
-> This is a text file.
-> This is line 2 of the file.
-> And this is line 3.
+> கோப்பின் முதல் வரி.
+> இது இரண்டாம் வரி.
+> மேலும், இது மூன்றாம் வரி ஆகும்.
 => nil
 ```
 
-By using the `'r'` option we are opening the file in _read-only_ mode. Any writing we tried to do to our file here would fail. But we can call the `read` method and store the contents of our file in the entire_file variable, and then put the variable to the screen.
+`'r'` பயன்படுத்துவதன் மூலம் நாம் கோப்பை _read-only_ mode அதாவது படிக்க மட்டுமே வகை செய்யும் விதமாக திறக்கிறோம். இவ்விதமாக திறந்த கோப்பில் நாம் எழுத முற்பட்டால், அச்செயல் தோல்வியடையும். ஆனால், நாம் `read` நிரல்பாகத்தை அழைத்து கோப்பின் முழு தகவலையும் ஒரு மாறினியில் சேமித்து, பின்னர் திரையில் வெளியீடு செய்யலாம்.
 
-If we want to read each line, we can use the `readlines` method.
+ஒவ்வொரு வரியாக படிக்க வேண்டுமென்றால், `readlines` நிரல்பாகத்தை பயன்படுத்தலாம்.
 
 ```ruby
 File.open("our_file.txt").readlines.each do |line|
@@ -43,28 +43,28 @@ File.open("our_file.txt").readlines.each do |line|
 end
 ```
 
-Though both ways of reading the file will read and output each line, there is a significant difference in what these two methods return. For our read method, the entire file is captured and `nil` is returned. For the readlines method, each line is stored inside of an array, with the entire array returned at the end of the method.
+இரு வழிமுறைகளிலும், கோப்பு படிக்கப்பட்டு ஒவ்வொரு வரியாக வெளியீடு செய்யப்படும். ஆனாலும், அவ்விரு நிரல்பாகங்களின் வெளியீட்டிலும் பெரும் வித்தியாசம் உள்ளது. `read` நிரல்பாகத்தை பயன்படுத்தும் போது, கோப்பில் உள்ள முழு தகவலும் படிக்கப்பட்டு `nil` வெளியீடு செய்யப்படுகிறது. ஆனால், `readlines` நிரல்பாகத்தை உபயோகித்தால் ஒவ்வொரு வரியும் ஓர் அணியில் சேமிக்கப்பட்டு, இறுதியாக அந்த அணி வெளியீடு செய்யப்படுகிறது.
 
-Here’s an example of what that might look like.
+அது பின்வருமாறு தோற்றமளிக்கும்.
 
 ```ruby
 file_array = File.open("our_file.txt").readlines
-=> ["This is our text file.\n",
-    "This is line 2 of the file.\n",
-    "And this is line 3."]
+=> ["கோப்பின் முதல் வரி.\n",
+    "இது இரண்டாம் வரி.\n",
+    "மேலும், இது மூன்றாம் வரி ஆகும்."]
 ```
 
-We open our file with `File.open` and then call the readlines method. Each line of the file is added to an array until all lines have been read. Notice the `\n` new line characters inside of our strings of text. Remember, we can remove these using the each method and passing in a block with chomp.
+நாம் கோப்பை படிக்க, `File.open`-ஆல் readlines நிரல்பாகத்தை அழைக்கிறோம். கோப்பு முழுவதுமாக படித்து முடிக்கப்படும் வரை அனைத்து வரிகளும் ஓர் அணியில் சேர்க்கப்படுகிறது. நம் சரங்களுக்கு இடையில் `\n` எனும் புதுவரி எழுத்தை கவனித்தீர்களா? நாம் each நிரல்பாகத்தின் உதவியுடன், ஒரு தொகுதிக்குள் ஒவ்வொரு வரியையும் செலுத்தி chomp பயன்படுத்தி அந்த புதுவரிகளை எளிதாக நீக்கிவிடலாம்.
 
 ```ruby
 file_array = File.open("our_file.txt").readlines
   .each { |line| line.chomp! }
 
-=> ["This is our text file.",
-    "This is line 2 of the file.",
-    "And this is line 3."]
+=> ["கோப்பின் முதல் வரி.",
+    "இது இரண்டாம் வரி.",
+    "மேலும், இது மூன்றாம் வரி ஆகும்."]
 ```
 
-Wow! Now you know how to open, write, and read files! And don’t forget to close your files in your programs with the close method. It can be a bad thing to leave them open, because the computer won’t actually write and save the file until just before its closed. Also, open files can lead to overloading your memory usage.
+அற்புதம்! கோப்புகளை திறப்பதற்கும், அதில் எழுதுவதற்கும், அவற்றை படிப்பதற்கும் நீங்கள் கற்றுக் கொண்டீர்கள்! மேலும், close நிரல்பாகத்தை பயன்படுத்தி கோப்புகளை மூடுவதற்கு மறந்து விடாதீர்கள். கோப்புகளை திறத்துவிட்டு அப்படியே விட்டுவிடுவது நல்லதல்ல, ஏனெனில் கோப்பை மூடும்போது தான் கணினி நாம் எழுதிய தகவல்களை அதில் சேமிக்கும். இதற்கு மேலாக, திறந்து வைக்கப்பட்ட கோப்புகள் கணினியில் நினைவு திறத்தில் அழுத்தத்தை ஏற்படுத்தி அதன் செயல்பாட்டை குறைத்துவிடலாம்.
 
 <div style="height:30px;"></div>
