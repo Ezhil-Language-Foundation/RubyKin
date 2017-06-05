@@ -1,93 +1,133 @@
-# Variables
+மாறிகள் 
+
+எளிய நோக்கில், **மாறி**~கள், தகவலை சேமிக்கும் கலன்கள் / பாத்திரங்கள் 
+(containers) என்று சொல்லாம். 
+
+நீங்களும் மாறிகளை உருவாக்க தேவையான பொருட்கள், 
+1. கீழ்வரிசை ஆங்கில எழுத்துக்கள் 
+2. சமக்குறி 
+3. மதிப்பு 
+
+பெரும்பாலும் *மதிப்பு*, ஒர் எண்ணாகவோ, சரமாகவோ, சற்று சிக்கலான குறியாகவும் இருக்கலாம். நீங்க கணக்குப் பாடத்தில் பார்த்திருப்பீங்க. 
+
+``` 
+x = 12 
+x `-யின்` மதிப்பு என்ன ? 
+=> 12 
+``` 
+
+சமக்குறிக்கு இடப்புறமாக எதை எழுதினாலும், அது ஒரு மாறியின் 
+பெயரை வரையறுக்கும். சமக்குறி வலப்புறமாக இருக்கும் மதிப்பை மாறிக்கு அளிக்கும். **மாறி**களை வரையறுக்கும் சில எடுத்துக்காட்டுக்கள். 
 
 
-At their simplest, variables are merely storage containers. They help us hold information. You create your own variables, starting with a lowercase letter followed by an equal sign and its value (usually a number or a string, but sometimes more complex code can be stored in a variable). You’ve seen this before in math.
+```ruby 
+myVar = "சரத்தின் மதிப்பு" 
+a_long_var_name = 42 
+myCat = "முறுக்கு மீசை" 
+``` 
+----- 
 
-```
-x = 12
-The value of x is?
-=> 12
-```
+**தேக்குதல் / சேமித்தல் / சேர்த்தல்** 
 
-In Ruby, a variable name is defined once you write (almost) anything left of the equal sign. The equal sign (as in most programming languages) is used to _assign_ the value to the right, to the variable. Here are a few more examples of creating variables.
+1. தண்ணீரை, ஏரி (lake) குளம் (pond), கண்மாய்ப் போன்ற நீர்நிலைகளில் **தேக்கு**வதன் (store) மூலம், வேளாண்மைக்குப் பயன்படுத்தலாம். 
+2. பணத்தை **சேமி**த்து வைக்கும் பழக்கம் நல்லது. 
 
-```ruby
-myVar = "my string variable"
-a_long_var_name = 42
-myCat = "whiskers"
-```
+__மாறியும் தேக்கமும்__ 
 
-<br />
-__Variable Storage in Memory__
+நினைவகத்திற்கும் (memory) மாறிக்கும் என்ன தொடர்பு? என்று புரிந்துகொள்வது சற்றுக் கடினமாகத் தெரியலாம், எடுத்தவுடனே புரியவில்லை என்றாலும் நிரல்களை எழுதஎழுத புரியும். 
+
+எதையாவது தேக்க (அ) சேமிக்க நமக்கு இடம் தேவை, அப்படித்தான் கணினிக்கும் **`மதிப்பு`**களை இடம் தேவை. கணினி, மதிப்புகளைச் சேமிக்கத் தேவைப்படும் இடங்களை நினைவகத்தில் உருவாக்கும். 
+
+அவ்விடங்கள் வீணாக்கமால் இருக்க, கணினி தகவல்களின் போலிநகல்களைத் தேக்காது. இடம் என்று ஒன்று இருந்தால், அதற்கு முகவரி இருக்கும். இது நினைவகத்தில் இருக்கும் இடத்திற்கும் பொருந்தும். 
+
+``` 
+x = 12 
+``` 
+
+மேலுள்ள *`எ.கா`* வில் **`12`** என்ற மதிப்பைத் தேக்குக்கிற இடத்திற்கு முகவரி **`ABC12`** என்று வைத்துக்கொள்வோம். அப்போ இந்த **x** என்னதான் செய்கிறது? இது ஒரு நல்லகேள்வி ? 
+
+பொதுவாக, மாறிகள் மதிப்புகளை `தேக்காது`, அவை தேங்குகிற இடத்தைச் சுட்டும். 
+
+> மதிப்பை தேக்குகிற முகவரை, மாறி தேக்கும். 
+
+பின்வரும் **`எ.கா`** `(X, Y, Z)` ஆகிய மூன்று மாறிகளும் அதே இடத்தைப் பயன்படுத்தும், ஏன் தெரியுமா ? அவை அனைத்தும் **`12`** என்ற மதிப்பை சேமிப்பதால். 
+
+``` 
+x = 12 => நினைவக முகவரி: ABC12 
+y = x => நினைவக முகவரி: ABC12 
+z = 12 => நினைவக முகவரி: ABC12 
+``` 
+
+இப்போது உங்களுக்குப் புரிந்து இருக்கும், மாறிகளை எப்படித்தான் மதிப்பை தேக்குகிறது என்று. கீழுள்ள கட்டளைகளின் இறுதியில் **x** என்ற மாறி சுட்டும் மதிப்பு என்ன ? கண்டுபிடிங்க பார்க்கலாம். 
+
+``` 
+y = 5 
+# y நினைவக-முகவரி AB1யை சுட்டும், 
+# AB1 என்ற நினைவக-முகவரியில், 5 என்ற மதிப்பு தேக்குப்பட்டு / சேமிக்கப்பட்டு இருக்கிறது. 
+x = y 
+# இப்போது x நினைவக-முகவரி AB1யை சுட்டும் 
+y = 7 
+# y நினைவக-முகவரி CD1யை சுட்டும், 
+# CD1-யில், 7 என்ற மதிப்பு தேக்குப்பட்டு / சேமிக்கப்பட்டு இருக்கிறது 
+``` 
+> **x** *யின்* மதிப்பு என்ன ? 
+
+X , Y இரண்டும் சமம் இல்லை என்பதைப் புரிந்துகொள்ளுதல் முக்கியம். 
+
+`X = Y` என்ற கட்டளை இயக்கப்படும் போது, Y தான் சுட்டும் AB1 என்ற நினைவக முகவரியைத்தான் Xக்கு அளிக்கும், அதில் இருக்கும் மதிப்பை அல்ல. 
+
+பின்னர் Y எதனைச் சுட்டினாலும், X தான் சுட்டும் AB1*யை* மறக்காது. 
+
+`Y = 7` என்ற கட்டளை இயக்கப்படும் போது, நாம் கணினிக்கு புதிய நினைவக முகவரியை உருவாக்கி, அம்முகவரியை **Y** சுட்ட செய்யக் கூறுகிறோம். இதனால் X சுட்டும் முகவரி மாறாது, அதனால் 5 என்ற மதிப்பையே பெரும். 
 
 
-With computers, variable storage is slightly different than common math, due to the way memory storage is created. Don't worry if this section seems complicated, you will start to get the hang of it as you write more code.
+---------- 
 
-In an effort to _not_ waste memory, the computer avoids storing duplicate information. In the following example, each variable `(X, Y and Z)` will point to the same place in memory because they store the same value: twelve.
 
-```
-x = 12
-y = x
-z = 12
-```
+`object_id` என்ற *ரூபியின்* உள்ளார்ந்த செயற்கூறு, பொருளின் அடையாளயெண்ணைத் தரும். எவ்வெண்ணை நாம் கிட்டத்தட்ட தனித்துவம் பெற்ற நினைவகமுகவரியை போன்றது. 
 
-In order to store the value 12, the computer creates a location in memory with an address, let's assume the address is ABC12. In this sense, a variable is like an X on a treasure map, guiding you to the right location.
+`object_id` *செயற்கூற்றை* வைத்துக்கொண்டு சில எடுத்துகாட்டுகளைப் பார்க்கலாம் வாங்க, 
 
-Yet variables don't _actually_ store their information--they point to it. Or in another way, variables store memory addresses that store information. In the example above, each variable points to the same memory address that stores the number 12. This way the computer doesn't need to create three different memory locations for one value, it can use ABC12 for all three.
+``` 
+y = "வணக்கம்" => y.object_id => 7021 
+x = y => x.object_id => 7021 
+``` 
 
-```
-x = 12  => memory address: ABC12
-y = x   => memory address: ABC12
-z = 12  => memory address: ABC12
-```
+இதுவரை, "வணக்கம்" என்ற ஒரு மதிப்பை தேக்க ஒரேயொரு நினைவக இடம் மட்டுமே ஒதுக்கப்பட்டுள்ளது, X மற்றும் Y அவ்விடத்தைப் பகிர்ந்துகொள்ளும். 
 
-Now that you know how variables store information (or memory addresses) see if you can figure out the end value of X:
+``` 
+y = "வாழ்க" => y.object_id => 8333 
+x மதிப்பு என்ன? => x.object_id => 7021 
+``` 
 
-```
-y = 5
-# y points to memory address AB1,
-# which contains the value 5
-x = y
-# x points to memory address AB1
-y = 7
-# y now points to memory address CD1,
-# which contains 7
+**Y**க்கு "*வாழ்க*" என்ற புதிய மதிப்பை அளிக்க, நாம் புதிய நினைவக இடத்தை ஒதுக்க வேண்டும். தற்போது **X** மதிப்பு "வாழ்க" என்று இருக்காது, அது இன்னமும் "*வணக்கம்*" என்றே இருக்கும். 
 
-x equals ?
-```
+"*வணக்கம்*" என்ற மதிப்பை அளிக்கும்போது எந்த நினைவகஇடத்தைக் கொடுத்தோமோ 
+அதையேதான் **X** இன்னமும் சுட்டும். 
 
-The trick here is to understand that X does _not equal_ Y. Remember, X only _POINTS_ to the value stored in the memory address that Y points to (AB1), at the time it was assigned. No matter what happens later to Y, the only thing X needs to remember is the location of AB1 (which will always be 5 while this program is running).
+நாம் மாறிகளை, புதுத் தகவல்களை மாற்றும் போதோ , Ruby தற்போது ஒதுக்கியுள்ள இடங்களில் நாம் மாற்றும் மதிப்பு இல்லை என்றால் மட்டுமே புது இடங்களை ஒதுக்கும். 
 
-When we change the value of Y to 7, we are actually telling the computer to create a new memory address that contains the value 7 and point to it. X does not change its original address, so the value of X remains 5.
 
-There is a built-in Ruby method called `object_id` that shows the id of the Ruby object. This can be correlated to a kind of unique memory address. Let’s look at the following example using this method.
+சற்று குழப்பமா இருக்க மாதிரி இருக்கும், கவலைப்பட வேண்டாம்! 
 
-```
-y = "test" => y.object_id => 7021
-x = y      => x.object_id => 7021
-```
+நிரலாக்க செய்ய நினைவகஇடம், ஒதுக்கீடு, முகவரி பற்றி முழுவதும் தெரிந்து வேண்டும் என்ற தேவை இல்லை. 
 
-At this point, only one memory address needs to be created, since the stored value ("test") is the value for both X and Y.
+மற்ற முக்கிய நிரலாக்க கருத்துருக்களைக் கற்கும் போது, உங்களுக்கு மேலும் புரியும். 
 
-```
-y = "new"  => y.object_id => 8333
-x equals?  => x.object_id => 7021
-```
 
-Once we change the value of Y, we create a new memory location with a new value stored (the string "new"). X does not equal "new", it still equals the value stored in the original memory address that it pointed to at the time we set X equal to Y (the string "test").
+தற்போதைக்குப் புரிந்து கொள்ள வேண்டியது 
 
-When we change variables and add new information, Ruby creates more memory locations with specific addresses--if none of the current addresses are holding the same information. And actually, Ruby has already created several object ids to help store common numbers and letters in memory, like the number 12 in our example above.
+`=` குறிக்கு பொருள் என்ன ? 
 
-Don't worry if this is all too confusing. You don't actually _need_ to fully understand this concept to program. As we move along through the other core concepts of coding you will begin to see how variables work within the bigger picture.
+> **`=`** சமக்குறி, வலப்புறம் இருக்கும் மதிப்பை இடப்புறம் இருக்கும் பெயருக்கு தரும் 
 
-The key point to remember is that an `=` equals sign in programming means "assign the value to the right of me, to the name on the left." Visually, that would look like this:
 
-```
-number12 = 12
+``` 
+number12 = 12 
 
-(variable name)  (is assigned)   number 12
-  number12             =               12
+(variable name) (அளிக்கும் ) எண் 12 
+number12 = 12 
 
-```
+``` 
 
-<div style="height:30px;"></div>
+<style="height:30px;">
