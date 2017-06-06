@@ -1,31 +1,36 @@
 # Summary
 
 * [நிரலாக்கம் என்றல் என்ன ?](what_is_programming/intro.md)
-   * [கட்டளை கணம்](what_is_programming/instruction_set.md)
+   1. [கட்டளை கணம்](what_is_programming/instruction_set.md)
 * [எண்கள்](numbers/number.md)
-   * [பயிற்சி](numbers/practice.md)
+   1. [பயிற்சி](numbers/practice.md)
 * [சரம்](strings/string.md)
-   * [பயிற்சி](strings/practice.md)
+   1. [பயிற்சி](strings/practice.md)
 * [மாறிலி](variables/variable.md)
-   * [பயிற்சி](variables/practice.md)
+   1. [பயிற்சி](variables/practice.md)
 * [ஆனால் நிபந்தனை கட்டளை](if_and_else/conditionals.md)
-   * [பயிற்சி](if_and_else/practice.md)
+   1. [பயிற்சி](if_and_else/practice.md)
 * [மடக்கு கட்டளை](loops/loop.md)
-   * [பயிற்சி](loops/practice.md)
+   1. [பயிற்சி](loops/practice.md)
 * [தரவமைப்பு வகைகள்](collections/storage.md)
-   * [அணிகள்](collections/array.md)
-   * [எண்குறி](collections/hash.md)
-   * [பயிற்சி](collections/practice.md)
+   1. [அணிகள்](collections/array.md)
+   
+   2. [எண்அடைவு](collections/hash.md)
+   
+   3. [பயிற்சி](collections/practice.md)
 * [சார்பு நிரல்பாகம்](methods/functions.md)
-   * [பயிற்சி](methods/practice.md)
+   1. [பயிற்சி](methods/practice.md)
 * [எண்வகை தரவமைப்புகள்](enumerables/enumerable.md)
-   * [ஒவ்வொன்றாக](enumerables/each.md)
-   * [ஒவ்வொன்றாக இடம்காட்டியுடன்](enumerables/each_with_index.md)
-   * [தேர்ந்தெடு](enumerables/select.md)
-   * [தொடர்புறு அணி](enumerables/map.md)
-   * [பயிற்சி](enumerables/practice.md)
+   1. [ஒவ்வொன்றாக](enumerables/each.md)
+   
+   2. [ஒவ்வொன்றாக இடம்காட்டியுடன்](enumerables/each_with_index.md)
+   
+   3. [தேர்ந்தெடு](enumerables/select.md)
+   
+   4. [தொடர்புறு அணி](enumerables/map.md)
+   
+   5. [பயிற்சி](enumerables/practice.md)
 * [கோப்புகள்](files/file.md)
-   * [முடிவுகள்](files/the_end.md)
+   1. [முடிவுகள்](files/the_end.md)
 * [மாதிரி பயிற்சி விடைகள்](answers_to_practice_problems/answers.md)
 * [இணைப்பு](appendix/contact.md)
-

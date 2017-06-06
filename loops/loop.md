@@ -1,7 +1,7 @@
-# Loops
+# மடக்கு வாக்கியம் (Loops)
 
 
-At its most basic level, a loop is when a computer repeats a specific task. A computer is kind of like a robot, because you can make it do lots of things very quickly. When you give it a loop, you're telling the computer to repeat a task over and over. Since the computer can perform thousands of operations within a second, loops become very powerful. Let’s look at a previous code example again to help us understand loops.
+அடிப்படையில் கணினியை பலமுறை ஒரு குறிப்பிட்ட சில கட்டளைகளை செய்ய முனைவது மடக்கு வாக்கியம். கணினி மனிதர்களை போல் இன்பம், வலி, பசி போன்ற உணர்வுகளுக்கு ஆளாகாததால் இந்த இயந்திரம் சளைக்காமல் வேலைகளை (கணக்குகளை) செய்யும் - அதற்க்கு "போர்" அலுப்படையாமல் வேலைகளை செய்யும் திறன் உள்ளது. ஒரு மடக்கு வாக்கியம் (loop "லூப்" என்று ஆங்கிலத்தில் சொல்வார்கள்) என்பது ஒரே செயலை பலமுறை திரும்ப திரும்ப செய்யும் பொருள் கொண்டது; கணினி ஒரு மின் இயந்திரம் என்பதால் கடகட என்று நொடிக்கு பல மில்லியன் "flops" (floating-point operations per second) என்ற வேகத்தில் நீங்கள் இட்ட மடக்கு வாக்கியம் சூழ்ந்த கட்டளைகளை கண்சிமிட்டும் நேரத்தில் முடிக்கும். கீழ் வரும் நிரல் துண்டை படித்து அதில் உள்ள "while" மடக்கு வாக்கியத்தை ஆராய்ந்து பார்க்கலாம் வாருங்கள்.
 
 ```ruby
 x = 0

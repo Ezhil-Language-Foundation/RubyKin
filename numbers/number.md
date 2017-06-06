@@ -32,9 +32,8 @@ And if you’re on Windows, open fxri from the Ruby section of your Start Menu.
 As a third option, check out Repl.it (http://repl.it/languages/Ruby). This is a pretty fantastic tool that allows you to type code into your web browser. No installation required!
 
 Next, type the letters `irb` into the terminal or shell screen and hit enter.
-
-
-__So, what is IRB anyway?__
+ 
+__IRB என்றால் என்ன?__
 
 IRB stands for Interactive Ruby Shell. An Interactive Ruby Shell is like a little secret fort located inside your computer. You can use your IRB environment to play around with Ruby and learn different commands. Open up IRB (from a shell window or using www.repl.it/languages/Ruby and try typing some of these simple math calculations to see what the computer returns. Or try your own!
 

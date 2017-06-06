@@ -14,3 +14,7 @@ Let's get started!
 
 வாங்க, இந்த பயணத்தை தொடரலாம் 
 ==
+Creative Commons License 
+
+This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License. The right to copy, distribute, display, perform, modify and use this work for any purpose is hereby granted. For use in commercial purposes permission must be requested.
+ ![Creative Commons License]( https://i.creativecommons.org/l/by-nc/4.0/88x31.png)

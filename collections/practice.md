@@ -13,39 +13,23 @@ __பயிற்சி__
 5) வகுப்பு வாத்யார் எப்படி வகுப்பில் சரிசமம் பையன்களும் பொண்ணுங்களும் இருப்பார்கள் என்று சரிபார்க்கலாம் ? இதற்க்கு என்ன நிரல் துண்டு உதவும். உதவி குறிப்பு: அணியின் நீளம் என்பது இங்கு எதனை குறிக்கும் என்று யோசித்து பாருங்கள்.
 
 
-#####எண்குறி அடைவு
+==எண்குறி அடைவு==
 
-1) Create a hash for the Wizard’s magic bag. Inside the
-bag, we’ll put 3 frogs, 5 herbs, and 10 scrolls. Assign
-the hash to the variable "bag".
-What does your hash look like?
+# மாயாவியின் கைபையில் உள்ள உறுபடிகளை குறிக்க நிரலில் எண்குறி அடைவு மூலம் குறிக்க. இந்த பையில்
+3 தவளைகள், 5 மூலிகைகள், மற்றும் 10 சுவடிகள் உள்ளன.  "bag" என்ற பெயரில் ஒரு மாறிலியை உருவாக்குக.
+உங்கள் நிரல் எப்படி அமைந்தது ?
 
-2) Remember, hashes consist of key value pairs of any
-data, not just numbers. Let’s add a wizard’s spell and
-its result (which the wizard can never seem to remember).
-Add a spell to our wizard’s bag with the key: "shazam"
-and the value "turns subject into a frog".
-Now what's in our bag?
+2) எண் குறி அடைவில் எந்த வகையான மதிப்புகளையும் சேமிக்கலாம் - வெறும் எண்கள் மட்டுமல்ல - இதனை நினைவில் கொள்ளுங்கள். மேல் உருவாக்கிய அடைவில் மாயாவியின் மந்திரம் ஒன்றை சேமியுங்கள்.
+மாயாவியின் பையில் "shazam" என்ற மந்திரத்தை சேமியுங்கள் - அதன் விளைவை அடைவின் மதிப்பாக சேமியுங்கள்.
+இங்கு "shazam" என்ற மந்திரம் "turns subject into a frog" என்ற விளைவை உண்டாக்குவதால் அதனையே மதிப்பாக சேமியுங்கள்.
+இப்போது கைபை நிரல் எப்படி இருக்கிறது ?
 
-3) Our wizard has a change of heart and decides he never
-wants to turn anyone into a frog. How can we remove the
-spell "shazam" from our wizard bag?
+3) சரி இப்போ மாயாவி மனது மாறி அவர் பையில் உள்ள "shazam" என்ற மந்திரத்தை அழிக்க விரும்புகிறார்; எதனை எப்படி செய்வது ?
 
-4) Our wizard has recently acquired 3 different types of
-potions. 4 orange potions, 5 blue potions and 7 red
-potions. How might we add another hash of potions to our
-bag?
+4) மாயாவிக்கு சில புதிய லேகியங்கள் கிடைக்கின்றன; இவை  4 ஆரஞ்சு லேகியம், 5 நீலம், மற்றும் 7 சிவப்பு லேகியங்கள். உங்கள் 
+பையில் லேகியங்கள் என்ற பெயரில் இந்த தகவல்களை எண்குறி அடைவாக சேமிக்கவும்.உதவி குறிப்பு: ஒரு  அடைவு அதன் 
+உறுபடிகளில் மற்றோரு எண்குறி அடைவை கொள்ளலாம்.
 
-Hint: remember that we can have collections within a
-collection.
-
-5) Now that our bag has four keys (frogs, herbs, scrolls
-and potions), we can use these keys to access our data.
-In order to make a new spell, our wizard needs 2 frogs,
-3 herbs, 1 scroll and 2 blue potions. How can we remove
-these items from our hash?
-
-Hint: We can set the value of a key item to itself, minus
-how many items removed.
-
-<div style="height:30px;"></div>
+5) அடைவில் தற்போது நன்கு உறுபடிகள் உள்ளன  (தவளை, மூலிகை, சுவடி மற்றும் லேகியம்);
+ஒரு புதிய மாயம் செய்ய மாயாவிக்கு  2 தவளைகள்,
+3 மூலிகைகள், 1 சுவடி மற்றும்  2 நீல லேகியங்கள் தேவை. இவற்றை கைப்பையில் இருந்து எடுங்கள் - மீதம் எவ்வளவு உள்ளது ?உதவி குறிப்பு : கழித்தல் '-' செயற்குறியை பயன்படுத்துங்கள் 

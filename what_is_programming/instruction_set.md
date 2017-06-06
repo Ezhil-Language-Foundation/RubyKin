@@ -1,55 +1,53 @@
 
 உங்கள் கணினியிடம் "ஒரு படம் எடு", இல்லை "ஞாயிறு மாலை 5 மணி அளவில் என்ன எழுப்பு" என்று சொன்னால் அதற்க்கு புரியுமா ? நேராக சொன்னால் புரியாது. காரணம் கணினியில் அதற்க்கு ஒரு தனிப்பட்ட மொழியே புரியும் - இதனை "machine language" இயந்திர மொழி என்று கூறலாம். சராசரியாக இப்படி கணினியிடம் பேசுவதற்கு இயந்திர மொழி என்பது பதில் கணினி நிரலாக்க மொழி மிக முக்கியமானது.
 
-Computers are a bit like dogs. They are great companions, but you need to give them commands to tell them what you want them to do. There are a lot of different programming languages, just like there are a lot of foreign languages. However, just as there are similarities in German, French or Spanish, there are similarities across programming languages, like JavaScript, Ruby or Python.
+கணினி சற்று செல்ல நாய்குட்டி போல நடக்கும்; நல்ல தோழமை, நட்பு எல்லாம் அளிக்கும் ஆனால் அதனை ஒன்று செய்ய வைக்கவேண்டும் என்றால் படி படியாக சொல்லி குடுக்க வேண்டும். அயல் மொழிகள் - கிரேக்கம், இசுப்பானியம், சீனம், பிரெஞ்சு, ஆங்கிலம் - உள்ளது போல கணினியிலும் நிரலாக்க மொழிகள் பல உள்ளன. இந்த மொழிகளில் உள்ள பொது அம்சங்கள் போலவே கட்டளை (imperative), செயல்நோக்கு (functional) மற்றும் பொருள்நோக்கு (object oriented) கணினி மொழிகளிலும் பொது அம்சங்கள் .
 
-This book will help you learn the basics of programming, using the Ruby language. The building blocks you learn in this book will help you learn any other programming language.
+இந்த புத்தகம் உங்களுக்கு ரூபி கணினி மொழி கற்றுகொள்ள உதவும்; இந்த தேர்ச்சி வருங்காலத்தில் மற்ற கணினி மொழிகளை கற்க பயனளிக்கும்.
 
-Each chapter will go into more detail with basics at the beginning and more complicated material at the end. For now, let’s get started with some simple ideas.
-
+இந்த புத்தகத்தில் முதல் அத்யாயங்கள் பின்வரும் அத்தியாயங்களை தெளிவு படுத்தும் வகையில் அதிகமான சிக்கல் அளவில் அமைக்கப்பட்டுள்ளது. நாம் இப்போது எளிதான சில சிந்தனைகளுடன் தொடங்குவோம்.
 
 __முழு எண், மெய்யெண், சரம்__... போன்ற அடிப்படை வகைகள்
 ![Art by Vixuong Hong](http://rubykin.com/images/rootbeer_float.png)
 
 நிரல் எழுதுவதுக்கு முன் நம்ம தரவு மதிப்புகளை பற்றி அறிந்து கொள்ளவது முக்கியம். Data is simply information that you can input (give), output (get), store or manipulate with a computer. The two fundamental types of data used in almost every programming language are _numbers_ and _strings_.
 
-Numbers come in two tasty flavors. Integers, which are whole numbers without a decimal point, and floats, numbers that contain a decimal.
+ரூபி மொழியில் எண்கள் இரண்டு வகையில் அமையும்; Integer என்று சொல்லப்படும் முழு எண்கள் - தசம புள்ளி இல்லாமல் முழுமையான மதிப்பை குறிக்கும் எண்கள் ஒரு வகை. மற்றவை தசம எண்கள் என்ற floating point numbers - இவை முழுமை இல்லாத பகுதி எண்களாக மட்டுமே அமையும் எண்கள் - இதனை மெய்யெண் என்றும் சொல்லலாம்.
 
-For example, these are integers:
+உதாரணத்திற்கு முழு எண் என்பது ரூபியில் இப்படி எழுதலாம்:
 
   ```ruby
   1, 7, 0, 13, 2000
   ```
 
-And these are floats:
+உதாரணத்திற்கு தசம எண் என்பது ரூபியில் இப்படி எழுதலாம்:
 
   ```ruby
   1.2, 3.14, 5.12345, 0.35
   ```
+முழு எண் என்பது புள்ளி குறியீடை கொள்ளாமல் உருவெடுக்கும். தசம எண் அல்லது மெய் எண் என்பது புள்ளி குறியீடையும் எண்கள் கொண்டு அமையும். இதனை சும்மா பார்த்தாலே சொல்லிவிடலாம் - ஜுஜுபி.
 
-Every time you see a whole number like 8 or 19 you will know they are integers, and every time you see a number with a tasty sprinkle, or decimal, they will look like this: 3.4 or 8.1 and you will know they are (root beer) floats.
+சரம் - சொற்கள் தரவு
+==
+கணினியில்ச ஒரு கட்டுரை எழுதி, பதிவு செய்யும் பொழுது நாம்  செய்யும் வேலை கணினியில் சரம் உள்ளீடுகளை  இடுவது. சரி சரம் என்றால் என்ன ? "மேற்கோள் குறியீடுகளுக்கு உள்ளே இட்ட எழுத்துக்கள் எல்லாம் சரம்". கடைசி வாக்கியம் மேற்கோள் குறியீடுக்குள் உள்ளதால் இதுவும் சரம் என்று ஆகும்! நீங்கள் சரங்களை ஏற்கெனவே பார்த்திருப்பீர்கள்!
 
-Simple, right? Ok, let's keep going.
-
-The second type of data, or information given to a computer, are called _strings_. What’s a string? "Anything between quotes is a string." Since that last sentence was inside of quotes, it was technically a string! You probably see strings all the time without even realizing it!
-
-For example, have you ever seen an alert message on your computer saying something like this:
+உதாரணத்திற்கு கீழே உள்ள எச்சரிக்கை செய்தியில் வருவது 'சரம்':
 
 ![example alert message](http://rubykin.com/images/alert_message.png)
 
-Somewhere inside a program or web application, an engineer wrote the sentence "File does not exist!" and put it in quotes to create a string. When you were alerted with the pop up box, that string was printed to the screen.
+இந்த மாதிரி வெளியீடு வருவதற்கு யாரோ நிரலாளர் ஒருவர்  "File does not exist!" என்ற சொற்களை எழுதி மேற்கோள் குறிக்குள் போட்டு சரம் என்று எழுதி இருப்பார். அதன்பின் உங்கள் செயலியில் தேவையான நேரத்தில் இந்த செயல்பாடு, சரம் உங்களுக்கு காட்ட பட்டது.
 
-Strings are a little bit like backpacks or lunch pails, they are great for storing all the stuff we care about in an easy-to-carry container. Except with a string, the straps are the quotes. We use strings to store words, sentences, and even files. Here are some examples of strings:
+சரம் என்பது நிரலாக்கத்தில் ஒரு டிபன் கூடை, அடுக்கு டப்பா போல - தேவையானது எல்லாத்தையும் ஒரு பெரிய மூட்டையா கட்டி வைத்துக்கொள்ளலாம். சரம் என்பது கூடையை காட்டும் கயிருக்கு பதில் மேற்கோள் குறிகளை கொண்டது. இந்த மாதிரியான சரங்களில் நம்ம சொற்கள், தொடர்கள், அல்லது முழு நீள கோப்புகளையும் சேமித்து வைத்துக்கொள்ளலாம். இந்தா நீங்களே பாருங்களேன்
 
 ```ruby
-"I'm a string!"
-"And_so_am_I"
-"9"
-"This long paragraph is even a string.\nAnd it has these
-strange \n things that we'll explain later."
+"என்னையும் செத்துக்கொள்ளுங்கள்!"
+"அப்ப_என்னையும்_கூடத்தான்"
+"9-இது எண் அல்ல சரம்"
+"பெரிய பெரிய பத்தி.\nஅதிலும் புரியாத 
+குறியீடு \n இதனை அப்பரம் விளக்குவோம்."
 ```
 
-9 is such a joker. Did you notice we put the number nine as a string? This is very different than the actual number nine, but we will get to that later.
+.
 
-Now that you know the two most fundamental pieces of data the computer uses (numbers and strings), it's time to dive a bit deeper into each of these data types.
+இந்த அத்யாயத்தின் முடிவில் உங்களுக்கு கணினியில் உள்ள அடிப்படையான இரண்டு தரவு வகைகள் - எண்கள், சரம் பற்றி கற்று கொண்டீர்கள் என்று எண்ணுகிறேன். இப்போ இவைகளை பற்றி மேலோட்டமாக மட்டுமில்லாமல் சற்று ஆழமாக பார்க்கலாம்.
 <div style="height:30px;"></div>

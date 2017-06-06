@@ -1,94 +1,98 @@
-# If and Else
+# 'If-Else' ஆனால் இல்லை நிபந்தனை கட்டளை 
 
+ஒருநாள் நீங்கள் படுக்கையில் இருந்து சனிக்கிழமை எழுந்திருக்கிறீங்க: 
 
-"If you clean your room then you can play, or else you won’t." - Mom
+"அறை சுத்தம் ஆனால் நீ  விளையாட செல்லலாம், இல்லை வீட்டில் உள்ளேயே தான் இருக்க வேண்டும்" -அம்மா  
 
-_If_ and _else_ statements help Ruby understand what you want her to do and when you want her to do it.
+என்ற ஒரு தாளில் எழுத்தி நிபந்தனையாக அம்மா அறை கதவில் ஓட்டினாள்.
 
-So far, we’ve learned how Ruby can perform basic math on numbers, store words and sentences as strings, and place these types of information into memory stored in variables. Now that we know how to store information and interact with it, we need a way of telling the computer what to _do_ with that information.
+இதில் இரு சொற்கள் _ஆனால்_ , _இல்லை_ வாக்கியங்கள் ரூபியிடம் உங்களுக்கு என்ன திசையில் நிரல் இயக்கம் தொடரவேண்டும் என்று சொல்லியும், ரூபியின் இயக்கத்தையும் கண்காணிக்கும்.
 
-One way we do that is with conditionals. This is why your parents say they love you unconditionally, because there is no _if_ or _else_, there is only 100% love, no matter what. Ruby doesn’t love anything unconditionally, Ruby needs to be convinced by conditions.
+இதுவரை, ரூபியில் எப்படி எண்களை பயன்படுத்தி கணிதம் செய்வது, சொற்களையும் வாக்கியங்களையும் சரங்களில் சேமிப்பது என்றும், இவ்விரண்டையும் மாறியில் கணினியின் நினைவில் சேமிப்பது என்றும் படித்து புரிந்துகொண்டோம். 
+இதன் வழி நாம் கணினியில் தகவல்களை எண்களாகவும், சரம் என்றும் குறியீடு செய்ய கற்றுக்கொண்டோம் - ஆனால் இதனை வைத்து எப்படி கணினியில் இயங்கும் திசையை நிர்ணயிப்பது என்று நமக்கு இயலவில்லை.
 
-A conditional is something that depends on other factors. If this _something_ happens, do _that_, otherwise, do something _else_. For example, if you are hungry, eat a sandwich, else, don’t eat a sandwich!
+இயங்கும் திசையை நிர்ணயிக்க ஒரு வழி நிபந்தனைகளுடன் நிரல்கள் எழுதுவது. நிபந்தனைகளுடன் இயங்கும் நிரல் என்றல் என்ன? இதனை புரிந்து கொள்ள இந்த நிலையை யோசியுங்கள்; உங்கள் பெற்றோர் உங்களை தடையில்லாமல், அளவில்லாமல்  அன்பு செலுத்துகிறார்கள் அல்லவா - அதாவது ஐம்பது சதவிகிதம் இல்லை முழு நூறு சதவிகிதம் கேள்விகள் இல்லாமல் அன்பு செலுத்துகிறார்கள் - இதனுடைய எதிர்மறையானது நிபந்தனை உடன் இருக்கும் அன்பு - "செல்லம் நீ கணக்கு பரிட்சையில் 100/100 வாங்குனால் மட்டும் உனக்கு இந்த ஆண்டு பிறந்தநாள் விழா". இந்த மட்டற்ற அன்பு, கேள்விகள் இல்லாத தூய தாயின் அன்பு கணினியிடம் கிடையாது - ரூபி இயங்குவாரத்திற்கு நிபந்தனைகளுடன் ரூபியை சமாளிக்க வேண்டும்.
+
+சரி, நிபந்தனைகளை எப்படி பயன்படுத்துவது என்று பார்ப்போம். நிபந்தனைகளுக்கு வெளி மாறி நிலையை ஒட்டி தீர்வு அமையுங். உதாரணம், இங்கு  _ஏதோ ஒன்று_ நடந்தது/மாறியது, ஆனால்  _ஒரு குறிப்பிட்ட காரியம் செய்யவும்_, இல்லை, மற்றோரு  _காரியம் செய்யவும்_. உதாரணத்திற்கு: உங்களுக்கு பசித்தால், "இட்லியை சாப்பிடுங்க" , இல்லையா, "இட்லியை சாப்பிடாதீங்க"!
 
 ![Art by Vixuong Hong](http://rubykin.com/images/eat-sandwich.png)
 
-Here’s how an If Else conditional might look in Ruby.
-
+ரூபியில் நிபந்தனை வாக்கியம்  கீழ் கண்டது போலவே அமையும்:
 ```ruby
-# set an x variable to the value 5
+# x மாறியை 5 என்ற மதிப்பிற்கு சம படுத்தவும்
 x = 5
 
-# start the if / else conditional
+# நிபந்தனையை தொடங்க 'if', 'else', 'end' குறி சொல்லை பயன்படுத்தவும் 
 if x <= 10
   puts x
 else
-  puts "Number is greater than 10"
+  puts "எண் 10-க்கு குறைந்ததாக இருக்க வேண்டும்"
 end
 ```
-
-In a conditional, the computer checks to see that the code after the _if_ is true. We call this code a block, which just means a small piece of code that has some function. In this case, our block is
+ 
+நிபந்தனை கட்டளை என்றால், கணினியில் ரூபி இயக்கி "if" என்ற குறிசொல்லுக்கு அடுத்து  வரும் துணுக்கு மெய் (true) என்கிற மதிப்புடையதா என்று பரிசோதிக்கும். இந்த பகுதி "நிரல் துண்டு" என்று அழைக்கப்படும். மேலே உள்ள எடுத்துக்காட்டில் நமக்கு "நிரல் துண்டு" இங்கே
 `X <= 10`.
 
-So, _if_ our block is _true_ (if X is less than or equal to 10), the computer will perform the action in the next line below the if statement. Since X is equal to 5, it _is_ less than 10, and the value 5 is _put_ on the screen. If X were 11, the conditional (X <= 10) would realize this was a false statement, and the string "Number is greater than 10" would be outputted (shown) on the screen.
+தற்போது நமது நிரல் துண்டு உண்மை (மெய், true) என்று ஆகியிருந்தால் (அதாவது 'x' மாறி 10-இன் கீழ் இருந்தால்), கணினி நிபந்தனை வாக்கியத்தின் மெய் அளவில் உள்ள அடுத்த கட்டளைக்கு சென்றிருக்கும் - அதாவது மாறியின் மதிப்பான 5-ஐ திரையில் "puts" வழி அச்சிடும். ஆனால் மாறி 'x' 11 என மதிப்பு கொண்டிருந்தால் நிபந்தனை "நிரல் துண்டு" பொய் என தீர்மானிக்கப்பட்டு நிபந்தனை வாக்கியத்தின் பொய் பகுதிக்கு சென்று "எண் 10-க்கு குறைந்ததாக இருக்க வேண்டும்" என்ற செய்தியை திரையில் இடும். இதுவே நிபந்தனை வாக்கியத்தின் செயல்பாடு.
 
-When the computer moves through an if-else conditional, it will follow the instructions under the _first_ if statement that evaluates to true. It then ignores all other conditions in the if-else conditional.
+உங்களது ரூபி மொழி நிரலில் பல "நிரல் துண்டு" நிபந்தனைகளை கோர்த்து வரிசையாக நிரல் எழுதலாம் - இதுவும் முதல் "நிரல் துண்டு" உண்மை என தீர்மானிக்க படும் வரை வரிசையில் பரிசோதிக்கப்பட்டு வரும்; கடைசியாக எது முதலில் தீர்மானிக்க படுகிறதோ அத்துடன் இயக்கம் முடியும் - பின்வரும் நிபந்தனை வாக்கியத்தின் அமைப்புகள் இயங்கமாட்டாது.
 
 <br />
-__What is a boolean?__
+__இரும மதிப்பு வகை (Boolean) என்றால் என்ன ?__
 
-We've just learned how a conditional checks to see if something is `true` or `false`. A true or false value is called a _boolean_ in programming. We could write another conditional in a different way using booleans.
+கடந்த பகுதியில் ஒரு மாறியின் மதிப்பை மெய் `true` (மெய்) அல்லது `false` (பொய்) என்று தீர்வு காண்பதும் அதனை கொண்டு நிபந்தனை வாக்கியம் எழுதுவதையும் பற்றி கண்டோம். இப்படி மெய் அல்லது பொய் என்று இரண்டே மதிப்புகளை கொண்ட மாறி 'இரும மதிப்பு' (Boolean) வகையை சேர்ந்தது [Boolean என்று பெயர் வர காரணம் கணித மேதை ஜார்ஜு பூள் அவரது கண்டுபிடிப்பை போற்றும் வகையில் இதை Boolean என அழைக்கிறோம்] என்று சொல்லலாம். இது போன்ற இரும மதிப்புகளை கொண்டு நாம் நிபந்தகனைகளை கீழே உள்ளபடி எழுதலாம்:
 
 ```ruby
 if false
-  puts "false"
+  puts "பொய் " #பதிவிடாது 
 elsif true
-  puts "true"
+  puts "மெய் " #பதிவிடும்
 else
-  puts "This won’t print"
+  puts "பதிவிடாது " #பதிவிடாது !
 end
 ```
 
-Let’s walk through each step to get a better understanding. `Nil` and `False` are the only objects in Ruby that are considered _falsy_. Something is falsy when it has a false value. `Nil` is Ruby’s way of representing nothing--nada, zip, zero! No value stored here whatsoever!
+மேலே உள்ள நிரலை படிப்படியாக மனதில் இயக்கி பார்க்கலாம் - இந்த வழிமுறை பின்னாட்களில் _"debugging"_  என்று சொல்லும் "வழு நீக்குதல்"-க்கு உதவியளிக்கும். `Nil` பூஜியம் மற்றும் (பொய்) `False` மதிப்புகள் மட்டுமே ரூபி மொழியில் 'பொய்' என்ற தர்க மதிப்பு  பெரும் - இவைகள் மட்டுமே பொய் என்று குறிக்க நாம் பயன்படுத்தலாம். `Nil` என்பது மண்ணாங்கட்டி ஒண்ணுமில்லாததை குறிக்கும் - அதாவது அங்கு ஒண்ணுமே கிடையாது - பூஜியம் - சுழி!
 
-In the example above, the conditional checks to see if _false_ is true. Since the `false` object will never be true, the computer moves on to the next line to see if `true` is true. It is, so Ruby puts the string _true_ to the screen!
+மேலே உள்ள உதாரண நிரலில் நிபந்தனை "நிரல் துண்டு" மதிப்பு (_பொய்_ என்ற உள்ளது) இங்கு மெய் என்று மதிப்பிடுமா என்று பரிசோதிக்கும். அது அப்படி செய்ய, "பொய்" என்று மதிப்பு எப்போதுமே மெய் என்பதற்கு ஈடாகாது என்பதனால், கணினி அடுத்த நிபந்தனை வாக்கியத்தின் பகுதிக்கு செல்லும் - இங்கோ துண்டு "true" என்பதன் மதிப்பு மெய் ஆகவும் அமைய, அது "மெய்" என்று  திரையில் அச்சிடும் "puts" செயல்பாட்டை இயக்குகிறது. 
 
-The final `else` will never print, because true will always evaluate to true and so the program exits before getting to the _else_ line. Remember, Ruby is only looking for the _first true_ if statement, ignoring everything else.
+கடைசி "else" கட்டளை இயக்காமலே நிரல் முடிவடையும் - இது ஏன் என்றால் ரூபி ஒரு நிபந்தனையில் முதல் மெய்யான .
 
-Here are the basic elements used to evaluate conditionals:
+ரூபி நிபந்தனைகளை மதிப்பிட பயன்படுத்தும் தொடர்புறு செயற்குறிகள் (relational operators):
 
 ```ruby
-<   # less than
->   # greater than
-<=  # less than or equal to
->=  # greater than or equal to
-==  # equal to
-!=  # not equal to
+<   # குறைவு 
+>   # கூடுதல் 
+<=  # சமம் அல்லது குறைவு
+>=  # கூடுதல் அல்லது சமம்
+==  # சமம்
+!=  # சமம் இல்லை
 ```
 
-When checking if an object is _less than_ or _greater than_, we use the same symbols found in math. When checking if some object is equal to another object, we use two equal signs. In Ruby, like many programming languages, one equal sign is used to assign or _give_ a value to a variable. If we want to check that an object is _not equal_ we use an exclamation mark before the equal sign. In Ruby, we could also simply use the word `not`.
+மேல் கண்ட ரூபி செயலுருபுகள் கணித குறியீடுகளாகவே இருக்கும். இரு உறுபடிகள் சமமா என்று கணக்கிட "==" இந்த குறியீடை பயன்படுத்துவோம் - இது நீங்கள் வகுப்பில் படிக்கும் கணிதத்தை போல இல்லாமல் சற்று மாறுபட்டு அமைந்தது. ரூபியில் "=" சமம் என்று குறியீடு ஒரு மதிப்பை ஒரு குறிப்பிட்ட மாறிக்கு அளிக்கும் வகை அமைந்தது. இரு உறுபடிகளும் சமம் இல்லாமல் இருப்பதை கண்டறிய "!=" என்ற குறியீடை பயன்படுத்தலாம். ரூபியில்  "இல்லை" என்ற சொல் `not` என்பதையும் "தர்க எதிர்மறை" (logical not) என்பதற்கு பயன்படுத்தலாம்.
 
 <br />
-__What's an object?__
+__நிரலக்த்தில் "பொருள்" என்றால் என்ன ?__
 
-You may have noticed that we keep talking about things as _objects_. To understand a _code object_ think about an object in real life. A ball, a book, or even your dog--these are all different types of objects or physical things. In programming, we try to represent real life objects with code objects.
+நிரலக்த்தில் "பொருள்" என்றால் என்ன என்பதை அறிந்து கொள்ள நிஜ வாழ்க்கையில் "பொருள்" என்றால் என்ன என்பதையும் பார்த்தால் புரிந்து கொள்ள உதவியாக இருக்கும். உங்கள் விளையாட்டு பொருட்கள், செல்ல நாய்குட்டி, பந்து, கிரிக்கெட் பேட் -- இவை எல்லாமே நிஜ வாழ்க்கையில் பொருட்கள் தான். இந்த மாதிரியான நிஜ வாழ்க்கை பொருட்களின் தன்மைகளை கணினியில் குறியீடு செய்ய நம்ம பயன்படுத்த போவது நிரலாக்க "பொருள்" (Object என்று இதனை ஆங்கிலத்தில் கூறுவர்; இதுவே "object oriented programming" என்ற பொருள் நோக்கு நிரலாக்த்திர்க்கு அடிப்படையாக அமைந்த்தது.
 
-For example, if you walk the dogs in your neighborhood, you may know their names in your head. Rex, Sparky, and Spot. But how would a computer know their names? Well, we could represent each _dog_ as a _string_ object in Ruby, like so:
+உதாரணத்திற்கு உங்கள் தெருவில் வாழ்பவர்களின் செல்ல நாய்குட்டிகளை தினமும் நடக்க நீங்கள் கூட்டி செல்வீர்கள் என்று எடுத்து கொள்வோம். இவைகளின் பெயர்கள் : ராமு, சோமு, முத்து. 
+
+ஒருநாள் நீங்கள் இந்த ரூபி புஷ்தகத்தை படித்துவிட்டு, "சரி இந்த நாய்குட்டிகளின் பெயரை நம்ம கணினியில் விடுவோமா?" என்று சிந்தித்தால் எப்படி இதனை சாதிப்பது ? ஏற்கெனவே படித்த "அணி" என்ற தரவமைப்பில் "சரம்" என்று மூன்று பெயர்கள் இடலாம் :
 
 ```ruby
-["Rex", "Sparky", "Spot"]
+["ராமு", "சோமு", "முத்து"]
 ```
 
-In fact, this line of code is actually four objects! Can you see why? We have Rex, Sparky and Spot, that makes three objects. But we also have the list of dogs, which is another object! This is the neat thing about Ruby, _everything_ is an object. Let me say that again.
-
+மேல் உள்ள நிரல் துண்டில் மூன்று சரங்களும் பொருள் என்று ரூபிக்குள் தோற்றமளிக்கும்; அடுத்து இந்த "அணி" என்பதும் நான்காவது பொருள் என்றும் தோன்றும். ஆம் - ரூபியில் எங்கும் பொருள் உள்ளது (அணி), எதிலும் பொருள்  உள்ளது (சரம்).
 <br />
 <div style="text-align: center;">
-__*Everything is an object*__
+__*ரூபியில் எல்லாம் பொருள் மயம்*__
 </div>
 <br />
 
-That means that every thing you have learned so far was a type of object. Numbers, strings, variables, if statements, booleans and even code blocks (such as X < 10)...these are all objects!
+இது முக்கிய பாடம் - இதுவரை புத்தகத்தில் நீங்கள் படித்த ரூபியின் அம்சங்கள் அனைத்தும் பொருள் என்று அமையும் - இவை  எண்கள், சரம், மாறிகள், நிபந்தனைகள், இரும தர்க்க வகைகள், ஏன் நிபந்தனை வாக்கியங்கள் கூட ...எல்லாமே "பொருள்" தான்!
 
-Next chapter we'll learn about Loops. (Yep, loops are objects too). Don’t worry, these aren’t the roller coaster type of loops.
+அடுத்த அத்தியாயத்தில் மடக்கு (loop) வாக்கியங்கள் பற்றி கற்போம்  (அதுவும் "பொருள்" தான்!). நீங்கள் இருக்கை பிடிப்பை (seat belt) பிடித்துக்கொள்ள வேண்டாம் - இது roller coaster போன்ற வயிற்றை கலக்கும் நடுவனத்தில் மடிப்புகள் அல்ல - வெறும் மடக்கு கட்டளை தான்.
 
 <div style="height:30px;"></div>

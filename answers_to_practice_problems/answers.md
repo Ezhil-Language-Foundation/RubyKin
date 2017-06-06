@@ -1,7 +1,7 @@
 #Answers to Practice Problems
 
 <br />
-__Chapter 2 - Numbers__
+__பாடம் 2 - எண்கள்__
 
 
 1) `2 + 3 + 5`
@@ -19,13 +19,13 @@ __Chapter 2 - Numbers__
 5) `4 ** 2`
   `=> 16`
 
-6) What is the result of `11 % 5` ?
+6) இந்த கணக்கின் `11 % 5` விடை என்ன?
   `=> 1`
 
 5 goes into 11 only twice, for a total of 10.
 11 minus 10 leaves a remainder of 1
 
-7) What is `14 % 3` ?
+7) `14 % 3` விடை என்ன ?
   `=> 2`
 
 
@@ -40,12 +40,12 @@ if `x % 2 == 0` is `true`, it’s an even number.
 if `x % 2 == 0` is `false`, it’s an odd number.
 
 <br />
-__Chapter 3 - Strings__
+__Chapter 3 - சரங்கள்__
 
 
-1) puts "What is the result" + " of " + "this operation?"
-What is the return result of this operation?
-  `=> nil`
+1) puts "இதன் விடை" + " என்னவாக " + "வெளிப்படும் ?"
+இதன் விடை என்னவாக வெளிப்படும்?
+`=> nil`
 
 The above puts method concatenated the strings, putting
 the result to the screen and returning nil.

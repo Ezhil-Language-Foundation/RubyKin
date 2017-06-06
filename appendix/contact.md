@@ -17,3 +17,7 @@ Twitter > @ezhillang
 Email   > ezhillang@gmail.com
 
 Blog    > ezhillang.blog
+
+Twitter > @jophine89
+
+Email   > jophinep@gmail.com

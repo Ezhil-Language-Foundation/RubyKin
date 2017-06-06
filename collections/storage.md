@@ -1,8 +1,7 @@
-# Collections
+# தரவமைப்புகள் (Collections)
 
-
-In order to store data, we use collections. There are two types of ways we store our data collections. One is called an Array, the other is called a Hash. You can think about a collection of data like a trunk of toys.
+தரவு மதிப்பு கொண்ட உறுபடிகளை கொள்ளும் ஒரு பாத்திரமே "தரவமைப்புகள்" எனப்படும். இது போன்ற தரவமைப்புகளில் இரண்டு வகையாக நமது உறுபடிகளை சேமிக்கலாம். முதலாவது "அணி" எனப்படும் (array) தரவமைப்பு, இரண்டாவது "எண் குறி அடைவு" எனப்படும் (hashtable). தரவமைப்பு என்பது ஒரு விளையாட்டு சாமான் போட்டியை போலவே - ஒன்னும் குழப்பமான விஷயம் இல்லை.
 
 ![Art by Vixuong Hong](http://rubykin.com/images/array-toy-chest.png)
 
-Let’s start with the Array toy chest first.
+முதலில் விளையாட்டு சாமான் அணி எனும் தரவமைப்புடன் இந்த பாடத்தை தொண்டங்கலாம்.
