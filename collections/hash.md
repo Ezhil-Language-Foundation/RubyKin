@@ -1,5 +1,4 @@
-
-##Hash
+##எண்ணிம அடைவு (ஹாஸ் - Hash)
 
 The next type of collection in Ruby is the _Hash_. Sometimes called a dictionary, a hash is an unordered list of key value pairs. A hash is more like a messy room than an array, which is very organized. With a hash, our list of items come in pairs, placed in any order.
 
