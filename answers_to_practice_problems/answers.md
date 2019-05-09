@@ -1,4 +1,4 @@
-#Answers to Practice Problems
+# பயிற்சி கேள்விகளின் விடைகள்
 
 <br />
 __பாடம் 2 - எண்கள்__
