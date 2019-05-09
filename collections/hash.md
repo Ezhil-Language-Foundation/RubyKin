@@ -35,19 +35,21 @@ toy_chest["விளையாட்டுப்பெட்டி"] = 7
 => 7
 
 toy_chest
-=> {"sea_monkeys" => 12, "dolls" => 5, "legos" => 514,
+=> {“அன்னம்"=> 12, "பொம்மை”=> 5, "சொப்புச்சாமான்”=> 514,
 "விளையாட்டுப்பந்து" => 7}
 ```
 
 By writing "விளையாட்டுப்பந்து" in brackets next to toy_chest, we’ve actually called a method on our hash, giving it a new key value pair of `"toy_cars" => 7`. To remove an element, we can call the `delete` method. Don’t worry too much about methods right now, we just want to show you how easy it is to handle data in your array or hash collections.
 
 ```ruby
-toy_chest.delete("sea_monkeys")
+toy_chest.delete("அழி")
 => 12
 
 toy_chest
-=> {"dolls" => 5, "legos" => 514, "toy_cars" => 7}
+=>  {"பொம்மை”=> 5, "சொப்புச்சாமான்”=> 514,
+"விளையாட்டுப்பந்து" => 7}
 ```
+
 மேல்கண்டதை விட கூடுதலாக ரூபீயில் அடைவில் உருப்படிகளை சேர்க்கவும், நீக்கவும் மாற்றவும் அதிக வழிகள் உள்ளன். இவற்றை அனுகுவதற்கு முன் நிரல்பாகங்கள் (methods) என்பதைப்பற்றி பயிலவேண்டும். அடுத்துவரும் சில தொடர்புறு அணி உதாரணங்களை வசித்த பின் நீங்கள் மேற்படியாக அடுத்த பாடத்திற்கு செல்லலாம்!
 
 
