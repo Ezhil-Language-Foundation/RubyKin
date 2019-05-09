@@ -48,7 +48,7 @@ toy_chest.delete("sea_monkeys")
 toy_chest
 => {"dolls" => 5, "legos" => 514, "toy_cars" => 7}
 ```
+மேல்கண்டதை விட கூடுதலாக ரூபீயில் அடைவில் உருப்படிகளை சேர்க்கவும், நீக்கவும் மாற்றவும் அதிக வழிகள் உள்ளன். இவற்றை அனுகுவதற்கு முன் நிரல்பாகங்கள் (methods) என்பதைப்பற்றி பயிலவேண்டும். அடுத்துவரும் சில தொடர்புறு அணி உதாரணங்களை வசித்த பின் நீங்கள் மேற்படியாக அடுத்த பாடத்திற்கு செல்லலாம்!
 
-There are several other ways to add, remove and manipulate data in our hash collection. But before we understand these methods, we need to learn about methods in general. Check out some examples of using a Hash below, and then, onward to the next chapter!
 
 <div style="height:30px;"></div>
