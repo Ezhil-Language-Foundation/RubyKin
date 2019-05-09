@@ -34,7 +34,7 @@ def process(fd):
             if os.path.isdir( f_or_d): 
                 process( f_or_d )
             else:
-                fd_perc[fd] = handlefile(f_or_d)
+                fd_perc[f_or_d] = handlefile(f_or_d)
     else:
         fd_perc[fd] = handlefile(fd)
 
@@ -45,8 +45,8 @@ def handlefile(fd):
         b = tam
         FLIST.append( [fd, {'lang_eng':a,'lang_tam':b,'perc':b/float(a+b)}] )
         #print(u"%s => %f %%"%(fd.replace(basename,''),100.0*float(b)/(a+b)))
-        return 100.0*float(b)/(a+b)
-    return 0.0
+        return 100.0*float(b)/float(a+b)
+    return -1.0
 
 basename = ''
 if __name__ == u"__main__":
@@ -57,6 +57,7 @@ if __name__ == u"__main__":
     fd_perc = [(k,v) for k,v in fd_perc.items()] 
     fd_perc2 = sorted(fd_perc,key=itemgetter(1))
     for it in fd_perc2:
+        if it[1] < 0.0: continue
         print(u"%2.4f%% => %s"%(it[1],it[0]))
     
     print('completion => %f%%'%(100.0*sum([x[1]['perc'] for x in FLIST])/len(FLIST)))
