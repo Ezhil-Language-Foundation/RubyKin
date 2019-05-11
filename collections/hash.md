@@ -28,7 +28,8 @@ toy_chest["சொப்புச்சாமான்”]
 => 514
 ```
 
-To add an item to our toy chest hash, we can simply use brackets in a similar way that we did above to retrieve information.
+மேல்கண்டபடி புதிய உருப்படிகளை நமது மாறியில் சேக்கலாம்.
+‘toy chest’ என்ற தோடர்புரு அணியில் சதுர அடைப்புக்குறிகளை கொண்டு புதிய உருப்படிகளை சேர்க்கலாம்:
 
 ```ruby
 toy_chest["விளையாட்டுப்பெட்டி"] = 7
@@ -39,7 +40,7 @@ toy_chest
 "விளையாட்டுப்பந்து" => 7}
 ```
 
-By writing "விளையாட்டுப்பந்து" in brackets next to toy_chest, we’ve actually called a method on our hash, giving it a new key value pair of `"toy_cars" => 7`. To remove an element, we can call the `delete` method. Don’t worry too much about methods right now, we just want to show you how easy it is to handle data in your array or hash collections.
+அதாவது "விளையாட்டுப்பந்து" in brackets next to toy_chest, we’ve actually called a method on our hash, giving it a new key value pair of `"toy_cars" => 7`. To remove an element, we can call the `delete` method. Don’t worry too much about methods right now, we just want to show you how easy it is to handle data in your array or hash collections.
 
 ```ruby
 toy_chest.delete("அழி")
