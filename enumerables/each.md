@@ -1,22 +1,22 @@
-
-##Each
+ஓவ்வொன்றாக (Each)
+==
 
 You can think of the `each` method as one that operates a block, or a specific piece of code, onto each element in your collection. For example, if we had a collection of toys we might store these in an array. If we wanted to print each toy on the screen, we can call the each method. In the example below, we create the toys array with our collection of toys, then we call each specific toy individually.
 
 ```ruby
 toys = [
-  "car",
-  "ball",
-  "action figure",
-  "stuffed animal"
+  "கார்",
+  "பந்து",
+  "வீரன் பொம்மை",
+  "வீட்டு விலங்கு"
 ]
 toys.each { |toy| puts toy }
 
 # Now each toy will be put to the screen:
- car
- ball
- action figure
- stuffed animal
+  கார்
+  பந்து
+  வீரன் பொம்மை
+  வீட்டு விலங்கு
 ```
 
 Let’s dig into the each method to see what we did. Since this method belongs to the Array class, we can call it on our toys array. We then give our `each` method a block of code to be executed or carried out and performed. In this case, we are using the `puts` method. In our `|pipes|` we define a temporary variable `toy` and call the puts method on each toy that is passed to our block.
