@@ -1,7 +1,7 @@
 ஓவ்வொன்றாக (Each)
 ==
 
-You can think of the `each` method as one that operates a block, or a specific piece of code, onto each element in your collection. For example, if we had a collection of toys we might store these in an array. If we wanted to print each toy on the screen, we can call the each method. In the example below, we create the toys array with our collection of toys, then we call each specific toy individually.
+'each' என்கின்ற நிரல்பாகம் (method) உங்களது அடைவில் உள்ள ஒவ்வொறு உருப்படியிலும் கொடுக்கப்பட்ட நிரல் துண்டினை இயக்கும். உதாரணமாக, ஒரு பொம்மை களஞ்சியத்தை அணியில் கொண்டு நிரல் எழுதினால் இவ்வாறு 'each' என்ற நிரல்பாகத்தை செயல்படுத்தலாம்: இதனை கொண்டு நமது பொம்மை அணியில் உள்ள உருப்படிகளின் பெயர்களை திரையில் இடலாம். அதாவது:
 
 ```ruby
 toys = [
@@ -12,7 +12,7 @@ toys = [
 ]
 toys.each { |toy| puts toy }
 
-# Now each toy will be put to the screen:
+# தற்போது ஒவ்வொறு பொம்மையின் பெயரும் 'toys' என்ற அணியில் இருந்து திரையிடப்படும்:
   கார்
   பந்து
   வீரன் பொம்மை
