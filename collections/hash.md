@@ -3,9 +3,10 @@
 ரூபீ மொழியின் மற்றொரு தரவம்சம் _Hash_ அல்லது எண்ணிம அடைவு என்பது. இதனை தோடர்புரு அணி அல்லது உருப்படி அகராதி என்றும் (இதன் நிறுவும் வடிவமைப்பை பொருத்து) அழைக்கலாம்.
 அதாவது ஒரு சொல்-பொருள் தொடர்பை எப்படி அகராதி பிரதிபலிக்கிரதோ அதேபோல் இவ்வாறான தரவமைப்புகள் அனைத்தும் ஒரு உருப்படி அதனுடன் தொடர்புடைய மதிப்பையும் கணினியில் கையாள உதவுகின்றது. அணி என்பதில் உள்ள வரிசைப்படுத்தும் குணம் இவ்வகை தோடரபுறு அணிகளில் கிடையாது - ஏனெனில் இவை சீரற்ற அமைக்கப்பட்டவை.
 
-In hash collections, we use curly brackets `{ }` wrapped around pairs of information separated by a comma, `{ "like" => "this" }`. The item to the left of the arrow `=>` is the _key_ and its _value_ is the element on the right.
+தொடர்புரு அணியில் உருப்படிகளை சுருளை அடைப்புக்குறி ‘{‘ , ‘}’, கொண்டு உருப்படியின் பெயர்-பொருள் என்று எழுதலாம். உதாரணம்: 
+{“உ-பெயர்” => “உ-பொருள்”}. இங்கு ‘=>’ என்ற குறியீடு பெயர் - பொருள் தொடர்பை குறிக்கும்.
 
-Hashes are extremely useful when we have multiple numbers of similar items in a list. For example, if you used a hash to organize your toy chest, it might look something like this:
+ஒரே ரகத்தில் பல பொருள்கள் இருந்தால் அவற்றை தோடர்புரு அணியாக எழுதலாம். உதாரணம், வீட்டின் விளையாட்சாமான்களையும் அதன் மதிப்பையும் கொண்டு ஒரு தோடர்புறு அணி உறுவாக்கினால், இப்படி இருக்கும்:
 
 ```ruby
 toy_chest = {
@@ -15,8 +16,7 @@ toy_chest = {
 }
 ```
 
-Each of these items is located in our toy chest, and the number of them is represented in the hash. So we have three keys (sea_monkeys, dolls and legos) with their corresponding values (12, 5 and 514). To access information in this hash, we can use brackets like we did for arrays.
-ண
+இந்த மூன்று உருப்படிகளும் நமது மாறியில் சேமிக்கப்பட்டது. உருப்படி பொயர்களும் - அதாவது அன்னம், பொம்மை, சொப்புச்சாமான் மற்றும் அதன் நேர்தோடர்புடைய மதிப்புகளான (உருப்படி பொருட்கள்) 12, 5, 514 உம் சேமிக்கப்பட்டது. இந்த சேமிக்கப்பட்ட தகவல்களை அனுக சதுர அடைப்புக்குறிகளை பயன்படுத்தவேண்டும்.
 ```ruby
 toy_chest["அன்னம்"]
 => 12
