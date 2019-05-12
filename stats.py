@@ -24,24 +24,19 @@ def get_words(filename):
                 njunk+=1
         letters = tamil.utf8.get_letters(data)
         ntamil = len( tamil.utf8.get_tamil_words( letters ) )
-        return (max(ntamil,nwords-njunk),ntamil)
+        return (nwords-njunk,ntamil)
     return (0,0)
 
+fd_perc = {}
 def process(fd):
     if os.path.isdir(fd):
         for f_or_d in glob.glob(os.path.join(fd,'*')):
             if os.path.isdir( f_or_d): 
-                for x in process( f_or_d ):
-                    yield x
+                process( f_or_d )
             else:
-                yield f_or_d
+                fd_perc[f_or_d] = handlefile(f_or_d)
     else:
-        yield fd
-
-def start(s_dir):
-    md_files = filter(lambda x: x.endswith('.md'),list(process(s_dir)))
-    fd_perc = { fd: handlefile(fd) for fd in md_files }
-    return fd_perc
+        fd_perc[fd] = handlefile(fd)
 
 def handlefile(fd):
     if fd.endswith(u".md"):
@@ -51,12 +46,13 @@ def handlefile(fd):
         FLIST.append( [fd, {'lang_eng':a,'lang_tam':b,'perc':b/float(a+b)}] )
         #print(u"%s => %f %%"%(fd.replace(basename,''),100.0*float(b)/(a+b)))
         return 100.0*float(b)/float(a+b)
-    return 0.0
+    return -1.0
 
 basename = ''
 if __name__ == u"__main__":
+    fd_perc.clear()
     basename = os.getcwd()
-    fd_perc  = start(os.getcwd())
+    process(os.getcwd())
 
     fd_perc = [(k,v) for k,v in fd_perc.items()] 
     fd_perc2 = sorted(fd_perc,key=itemgetter(1))
