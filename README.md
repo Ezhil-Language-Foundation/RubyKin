@@ -1,4 +1,4 @@
-இந்த புத்தகம் RubyKin.com என்ற ஆங்கில புத்தகத்தின் தமிழ் மொழியாக்கம்    
+இந்த புத்தகம் RubyKin.com என்ற ஆங்கில புத்தகத்தின் தமிழ் மொழியாக்கம் 
 ==
 இந்த புத்தகம் குழந்தைகளுக்கு நிரலாக்கம் பற்றி கற்று கொள்ள துணை கையேடாக இருக்கும். பெரியவர்களும் இதனை பயன்படுத்தலாம்.
 
@@ -14,7 +14,8 @@
 ==
 _உரிமம்_
 
-Creative Commons License 
+படைப்பாக்க பொதும உரிமம்
 
-This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License. The right to copy, distribute, display, perform, modify and use this work for any purpose is hereby granted. For use in commercial purposes permission must be requested.
+இந்த ஆக்க வேலையானது படைப்பாக்க பொதும உரிமம் என்ற வர்த்தக நோக்கம் இன்றிய சர்வதேச உரிமையின் கீழ் வெளியிடப்பட்டுள்ளது. எந்தவொரு நோக்கத்திற்காகவும் நகலெடுக்க, விநியோகிக்க, காட்சிப்படுத்த, மாற்றம் செய்ய, மற்றும் பயன்படுத்துவதற்கான உரிமையை இங்கு வழங்கியுள்ளது. வணிக நோக்கங்களுக்காக அனுமதி தேவை எனில் எம்மிடமிருந்து பெற்றுக்கொள்ள கேட்டுக்கொள்ளப்படுகிறீர்கள்
+
  ![Creative Commons License]( https://i.creativecommons.org/l/by-nc/4.0/88x31.png)

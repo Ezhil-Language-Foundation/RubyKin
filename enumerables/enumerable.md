@@ -1,9 +1,8 @@
 # Enumerables
 
+Enumerable தொகுதி என்பது நீங்கள் ஸ்கேன் செய்ய , வரிசைப்படுத்த, தேட மற்றும் தொகுப்புகளை கையாள அனுமதிக்கும் ஒரு ரூபி முறைகள் உள்ளமைக்கப்பட்ட ஒரு தொகுப்பு ஆகும். சேகரிப்புகள் இரண்டு வடிவங்களில் வரும் அவையாவன எண்ணிமஅடைவு மற்றும் தொடர்புரு அணி  என்பதை நினைவில் கொள்ளுங்கள். இந்த அத்தியாயத்தில் நான்கு அடிப்படைக் Enumerable தொகுதிகளை நாம் விபரிக்க உள்ளோம்:
 
-The Enumerable module is a collection of built-in Ruby methods that allow you to scan, sort, search and manipulate collections. Remember that collections come in two forms, hashes and arrays. We’ll cover four of the basic enumerables in this chapter:
-
-  * each
+  * ஒவ்வொரு
   * each\_with\_index
-  * select
-  * map
+  * தேர்வு
+  * தொர்புரு அணி

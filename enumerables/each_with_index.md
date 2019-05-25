@@ -1,21 +1,21 @@
 
 ##Each\_with\_index
 
-This enumerable method works much like each, except that it captures the index of the specific array its called on as well. Remember that an array is an ordered collection that uses an index (sorting system) to organize the data or information in the array. An array with five items has five indexes, from 0 to 4, and each index notes the location of each element.
+இந்த எண்ணிலடங்கா முறை ஒவ்வொன்றும் மற்றொன்றைப் போலவே செயல்படுகிறது,  தவிர அது குறிப்பிட்ட அணிகளின் குறியீட்டை அதன் அழைப்புக்கு தகுந்தவாறு பிடிக்கிறது. ஒரு அணி என்பது தரவுகளை அல்லது தகவல்களை ஒரு குறியீட்டு (வரிசையாக்க அமைப்பு)முறையில் வரிசைப்படுத்த உதவ பயன்படுகின்றது என்பதை நினைவில் வைத்துக்கொள்ளுங்கள். ஒரு அணி மற்றும் ஐந்து உருப்படிகள் சேர்த்து 0 இலிருந்து 4 வரை ஐந்து குறியீடுகளை கொண்டுள்ளன, ஒவ்வொரு குறியீடும் ஒவ்வொரு தனிமத்தின் நிலையையும் குறிப்பிடுகிறது.
 
 ```ruby
-my_array = ['ball', 'bat', 'hat']
+my_array = ['பந்து', 'மட்டை', 'தொப்பி']
 my_array[2]
-=> hat
+=> தொப்பி 
 
 my_array[0]
-=> ball
+=> பந்து
 ```
 
-In the example above, each item in the my\_array can be called by its index. The ball is located at index 0, the bat at index 1, and our hat at index 2. If we only want to print every other item, we might use the each\_with\_index method like this:
+மேலே உள்ள எடுத்துக்காட்டில், my_array இல் உள்ள ஒவ்வொரு உருப்பையும் அதன் குறியீட்டால் அழைக்க முடியும். பந்து (ball) குறியீட்டு 0 இல் அமைந்துள்ளது, Bat குறியீடு 1 இல் உள்ளது, மற்றும் குறியீடு 2 இல் எங்கள் Hat அமைந்துள்ளது. நாங்கள் ஒவ்வொரு பிற உருப்படியையும் அச்சிட விரும்பினால், ஒவ்வொரு குறியீட்டு முறையையும் இந்த மாதிரி பயன்படுத்தலாம்:
 
 ```ruby
-my_array = ['ball', 'bat', 'hat', 'uniform', 'shoes']
+my_array = ['பந்து', 'மட்டை', 'தொப்பி', 'சீருடை', 'சப்பாத்து']
 my_array.each_with_index do |item, index|
   if index % 2 == 0
     puts item
@@ -23,45 +23,44 @@ my_array.each_with_index do |item, index|
 end
 ```
 
-Remember that a modulo is a way of looking at the remainder (left over part) of a number. So here, we put the item to the screen if the index of the item has a remainder of zero when divided by 2. Since the indexes 0, 2, and 4 give no remainder when divided by 2, we only call the puts method on items at these particular indexes.
+modulo என்பது ஒரு எண்ணில் மீதமுள்ள அளவை (இடது பகுதிக்கு மேல்) பார்க்கும் ஒரு வழி என்பதை நினைவில் கொள்ளுங்கள். எனவே இங்கே, நாம் உருப்படிகள் குறியீட்டினை இரண்டால் வகுக்கும் போது பூஜ்ஜியத்தினை எஞ்சியதாக கொண்டிருக்கும்
+ஒரு உருப்படியினை திரையில் உடசெலுத்துவோம். இவற்றில் 0, 2, மற்றும் 4 ஆகிய குறியீடுகள் மீதமின்றி இரண்டினால் வகுப்படும்.
+ஆகவே இக் குறியீடுகளுக்குரிய உருப்படிகளை மட்டுமே உட்செலுத்துவோம் .
 
-We could use the `even?` method and curly braces to simplify our enumerable method.
+enumerable முறைமையை எளிமைப்படுத்த `even?` முறையும் சுருள் அடைப்புக்குறிகளும் பயன்படும்.
 
 ```ruby
 my_array.each_with_index do |item, index|
   puts item if index.even?
 end
 
-ball    #item at index 0
-hat     #item at index 2
-shoes   #item at index 4
+பந்து        #item at index 0
+தொப்பி     #item at index 2
+சப்பாத்து    #item at index 4
 ```
 
-Ruby's `even?` method allows us to skip the modulo part altogether. `Even?` will return true if the number it is called upon is an even number. Here is a way to see how the computer executes (carries out) each step in the each\_with\_index method.
+ரூபி இரட்டை எண் (even?)எனில் நம்மை  இம் முறை மட்டுப்படுத்தப்பட்ட தொகுதி பகுதியை தவிர்க்க அனுமதிக்கிறது. இரட்டை எண் (Even?), ஒரு இலக்கம் இரட்டை எண் எனில் அது true எனும் கட்டளைக்கு திருப்பி அழைக்கப்படும். ஒவ்வொன்றும் ஒவ்வொரு படியிலும் குறியீட்டு முறையினைப் பயன்படுத்தி கணினியை எவ்வாறு செயல்படுத்துகிறது என்பதைப் பார்ப்பதற்கான வழி கீழே தரப்படுள்ளது.
 
 ```ruby
-my_array = ['ball', 'bat', 'hat', 'uniform', 'shoes']
+my_array = ['பந்து', 'மட்டை', 'தொப்பி', 'சீருடை', 'சப்பாத்து']
 my_array.each_with_index do |item, index|
   puts item if index.even?
 end
 
-|'ball', 0| if 0 is even?, then puts 'ball'
-true => puts 'ball'
+|'ball', 0| if 0 is even?, then puts 'பந்து'
+true => puts 'பந்து'
 
-|'bat', 1| if 1 is even?, then puts 'bat'
+|'bat', 1| if 1 is even?, then puts 'மட்டை'
 false
 
-|'hat', 2| if 2 is even?, then puts 'hat'
-true => puts 'hat'
+|'hat', 2| if 2 is even?, then puts 'தொப்பி'
+true => puts 'தொப்பி'
 
-|'uniform', 3| if 3 is even?, then puts 'uniform'
+|'uniform', 3| if 3 is even?, then puts 'சீருடை'
 false
 
-|'shoes', 4| if 4 is even?, then puts 'shoes'
-true => puts 'shoes'
+|'shoes', 4| if 4 is even?, then puts 'சப்பாத்து'
+true => puts 'சப்பாத்து'
 
 ```
-
-The method starts out with an item and its index from the array. It then performs the block of code we specified between the `do` and `end` wrappers. In this example it will only put the name of the item if the index is an even number. Otherwise, the if statement will return false and Ruby will not put anything to the screen for that particular block of code.
-
-<div style="height:30px;"></div>
+இந்த முறையானது அணி ஒன்றின் உருப்படி மற்றும் இதன் குறியீட்டில் இருந்து தொடங்குகிறது. பின்னர் நாம் வரிசைப்படுத்தியுள்ள do மற்றும் end காரணிகளின் இடையே  குறித்த பகுதிக்குரிய கட்டளையை செயட்படுத்த வேண்டும். இந்த எடுத்துக்காட்டில் குறியீட்டு எண் இரட்டை எண் என்றால் மட்டுமே அது உருப்படியைப் பெயரிடும். இல்லையெனில், if கட்டளை தவறானது என திரும்பி வரும்  மற்றும் அந்த குறிப்பிட்ட கட்டளையைக்குரிய எந்த தகவலையும் ரூபி திரையில் காண்பிக்காது.

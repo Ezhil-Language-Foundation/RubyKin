@@ -1,16 +1,16 @@
-# Contact
+# தொடர்புக்கு
 
-If you would like to contact me with any feedback or questions, you can find me on the web in various places using: `mrdougwright`
+ஏதேனும் பின்னூட்டல் அல்லது வினா தொடர்பாக என்னைதொடர்பு கொள்ள விரும்பினால் நீங்கள் என்னை 'mrdougwright' என்பதை பயன்படுத்தி தொடர்பு கொள்ளலாம்.
 
 Twitter > @mrdougwright
 
-Email   > mrdougwright@gmail.com
+மின்னஞ்சல்  > mrdougwright@gmail.com
 
 Blog    > dogwithrug.com
 
-# __Translation__
+# __மொழிமாற்றம்__
 * Tamil Language (தமிழ் மொழிபெயர்ப்பு பற்றி)___
-Tamil translation contributed by Ezhil Language Foundation. எழில் மொழி அறக்கட்டளை இந்த நூலை மொழி பெயர்ப்பு செய்தது. தொடர்புக்கு இங்குள்ள தொடர்புகளை காணவும்.
+எழில் மொழி அறக்கட்டளை இந்த நூலை மொழி பெயர்ப்பு செய்தது. தொடர்புக்கு இங்குள்ள தொடர்புகளை காணவும்.
 - - -
 Twitter > @ezhillang
 
