@@ -19,19 +19,21 @@ toys.each { |toy| puts toy }
   வீட்டு விலங்கு
 ```
 
-Let’s dig into the each method to see what we did. Since this method belongs to the Array class, we can call it on our toys array. We then give our `each` method a block of code to be executed or carried out and performed. In this case, we are using the `puts` method. In our `|pipes|` we define a temporary variable `toy` and call the puts method on each toy that is passed to our block.
+each முறைக்குள்ளே நாம் என்ன செய்திருக்கின்றோம் என்பதைப் பார்க்கலாம்.இந்த முறை , வரிசை வகுப்பை சார்த்திருக்கும் வரை இதனை எங்களுடைய பொம்மை வரிசையில் பயன்படுத்த முடியும்.பின்னர் எங்களுடைய `each` முறையினை நிரலினூடாக செயற்படுத்த முடியும்.இங்கே நாங்கள் `puts` முறையினைப் பயன்படுத்துகின்றோம். எங்களுடைய `|pipes|` இல் நாங்கள் `toy` என்னும் தற்காலிக மாறியை வரையறுத்து `puts` என்னும் முறையினை ஒவ்வொரு `toy` குள்ளும் பயன்படுத்தும் நிரலாக்கத்தை கொண்டிருக்கின்றோம்.
 
-Our each method knows to look at each element (our four toys) inside the array. This is called iterating over the array. (Iterating over the array is just a fancy way of saying look at each toy in the collection). Now we store the value of each array element inside our `|pipes|` and call the puts method on each element. We could have written the same code like so:
+எங்களுடைய each முறையால்  வரிசை ஒன்றிலுள்ள எல்லா கூறுகளையும் பார்க்கமுடியும். இது வரிசயில்  மீண்டும் மீண்டும் தேடல்  என அழைக்கப்படும்(வரிசயில் மீண்டும் மீண்டும் தேடல் என்பது தொகுதியிலுள்ள ஒவ்வொரு toy இனையும் பார்ப்பதற்கான சிறந்த வழியாகும்) வரிசையிலுள்ள ஒவ்வொரு கூறுகளின் பெறுமதியையும் `|pipes|` இனுள்ளே நாங்கள் சேமிக்கலாம். அத்தோடு ஒவ்வொரு கூறுகளிலும் puts முறையினை பயன்படுத்தலாம்.நாங்கள் கீழுள்ளவாறு நிரலை எழுதியுள்ளோம்.
 
 ```ruby
 toys.each do |toy|
   puts toy
 end
 ```
+சுருளி அடைப்புக்களைப் பயன்படுத்தி `do` and `end` இனை ஒரு வரியில் எழுதமுடியும்.நீங்கள் அதனை கட்டாயமாகப் பயன்படுத்த வேண்டியதில்லை.ஆனால் இந்தக் குறுகிய முறையினை தேவைப்படின் பயன்படுத்தலாம்.அத்தோடு ரூபியின் மூலம் நிரலொன்றை எங்களுடைய `do end` or `{ }` என்ற நிரலினுள்ளே செயற்படுத்த முடியும்.இப்போது நாங்கள் எண்ணிம அடைவிலுள்ள each முறையினை எவ்வாறு பயன்படுத்த வேண்டும் என்று பார்க்கலாம்.
 
-The curly brackets are a way of writing `do` and `end` in one line. You don’t have to use them, but it is a shortcut that you can use if you want! Either way works, and Ruby will look to execute the code inside of our `do end` or `{ }` block. Now, let’s look at how we might use the each method on a hash.
 
 Imagine we had more than one toy in our collection. (If your parents are teaching you how to code in Ruby, you probably have a lot more than one toy in your collection. Lucky you!) We might use a hash to better represent or organize our toy box. Using each, we can print the toy and the number of toys in our collection.
+
+எங்களுடைய சேகரிப்பில் ஒன்றுக்கு மேற்பட்ட toy இருப்பதைக் கற்பனை செய்து பாருங்கள்.(உங்களுடைய பெற்றோர் உங்களுக்கு ரூபியில் நிரல் எழுத கற்பித்திருந்தால் உங்களுடைய சேகரிப்பில் ஒன்றுக்கு மேற்பட்ட toy இருக்க வாய்ப்புள்ளது.நீங்கள் அதிஷ்டாசாலி .)எங்களுடைய பொம்மைப் பெட்டியினை சிறப்பாக ஒழுங்குபடுத்த அல்லது காட்சிப்படுத்த எண்ணிம அடைவினைக் கடடாய பயன்படுத்த வேண்டும்.each இனைப் பயன்படுத்துவதன் மூலம் toy இனையும் toy இன் எண்ணிக்கையையும் காட்டிட முடியும்.
 
 ```ruby
 toys = {"car" => 1, "ball" => 3, "action figure" => 2,
@@ -43,7 +45,6 @@ ball => 3
 action figure => 2
 stuffed animal => 8
 ```
-
-When using the each method on a hash, Ruby knows that each element in the array has a key and a value. We could have used anything in our `|pipes|` to name our key and value pairs ( such as `|x, y|` ), but it’s easier to read when we identify our key and value by their names. We then call the puts method again on each element, use our friend interpolation `#{ }` to place our variable values in our string, and finally put the string of the toy, and number of toys, to the screen.
+எண்ணிம அடைவில் each முறையினைப் பயன்படுத்தும் போது வரிசையிலுள்ள ஒவ்வொரு கூறுகளும் key and a value உள்ளது என்பதை ரூபி தெரிந்து வைத்துள்ளது.`|pipes|` னுடைய key and value pairs இற்கு பெயரிட நீங்கள் எதை வேண்டுமானாலும் பயன்படுத்தலாம். உதாரணமாக `|x, y|`. ஆனால் key and value இனை அவற்றின் பெயரினால் அடையாளப் படுத்துவது இலகுவானது.பின்னர் நாங்கள் மீண்டும் puts முறையினை ஒவ்வொரு கூறுகளும் பயன்படுத்தி, எங்களுடைய interpolation `#{ }` மூலம் எங்களுடைய மாறிகளின் பெறுமதியினை சரம்களில் சேமிக்கமுடியும். அத்தோடு இறுதியாக toy களின் சாரம்களையும் toy களின் எண்ணிக்கையையும் காட்சிப்படுத்த முடியும்.
 
 <div style="height:30px;"></div>
