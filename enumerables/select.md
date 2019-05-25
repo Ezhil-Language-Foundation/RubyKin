@@ -1,7 +1,7 @@
 
 ##Select
 
-Okay, that might have been a little complicated to understand, but trust us, it will get easier with a little practice. Let’s look at the select method to see how it iterates (looks over the stuff) in a collection. Select works by looking at the block of code passed in, and then only returns the element if the block evaluates to be true.
+சரி, இது புரிந்து கொள்ள ஒரு சிறிய சிக்கலாக இருக்கலாம். ஆனால் எங்களை நம்புங்கள். இதனை சில பயிற்சிகளின் மூலம் எளிதாக அடையலாம். select செயன்முறையில் அதை எப்படித் தெரிவுசெய்வது என்பதைத் தெரிந்து கொள்வதற்குப் பார்க்கலாம். ஒரு தொகுதியின் கடந்து செல்லும் குறியீட்டைக் கண்டறிவதன் மூலம் ‘Select’ வேலை செய்கின்றது,தொகுதி true என மதிப்பிடப்பட்டால் மட்டுமே select இலுள்ள கூறுகளை தரும்.
 
 ```ruby
  $ [1,2,3,4].select { false }
@@ -11,9 +11,9 @@ Okay, that might have been a little complicated to understand, but trust us, it 
 => [1, 2, 3, 4]
 ```
 
-In the above example, the `select` method looks at each element in the array (1,2,3 and 4) and _returns_ that element if our block of code is true. Since our block of code is the _false_ boolean, the select method does not evaluate to true and returns nothing but an empty array. In the next line we pass `true` to the block and the select method returns every item in the array.
+மேலே உள்ள எடுத்துக்காட்டில், தேர்ந்தெடுக்கப்பட்ட முறை வரிசை (1,2,3 மற்றும் 4) இல் உள்ள ஒவ்வொரு உறுப்புகளுடனும் பார்க்கப்படுகிறது, மேலும் எங்கள் தொகுதி உண்மையாக இருந்தால் அந்த உறுப்பு விடையாக கிடைக்கும் .எங்கள் தொகுதி தவறான பூலியன் என்பதால், select முறை உண்மை மதிப்பீடு இல்லை மற்றும் விடையாக எதனையும் தராது ஆனால் அது ஒரு வெற்று வரிசையை தரும். அடுத்த வரியில் நாம் தொகுதிக்கு true ஐ  அனுப்புகின்றோம் மற்றும் select  முறை வரிசையில் உள்ள ஒவ்வொரு உருப்படியையும் விடையாக தருகின்றது.
 
-Here’s an example of how we might use the select method in a more useful way. Imagine you have a collection of test scores and you want to select only those scores above 80 points.
+தேர்ந்தெடுக்கப்பட்ட முறையை எவ்வாறு பயன்படுத்துவது என்பது மிகவும் பயனுள்ள வழியில் எவ்வாறு பயன்படுத்தப்படலாம் என்பதற்கான உதாரணம் இங்கே தரப்பட்டுள்ளது  பரீட்சை  மதிப்பெண்களின் தொகுப்பைக்  கற்பனை செய்து பாருங்கள், 80 புள்ளிகளுக்கு மேலாக மட்டுமே மதிப்பெண்களைத் தேர்ந்தெடுக்க வேண்டும்.
 
 ```ruby
 test_scores = [23,80,34,99,54,82,95,78,85]
@@ -23,7 +23,7 @@ end
 => [99, 82, 95, 85]
 ```
 
-Here we use select to look at each element in the array. This value will be temporarily stored in the `score` variable. Then each particular score is checked to see if it is greater than 80. Each of the scores that are greater than 80 will be collected and returned as an array.
+இங்கே வரிசையிலுள்ள ஒவ்வொரு கூறுகளையும் பார்ப்பதற்கு select இனை நாங்கள் பயன்படுத்துகின்றோம்.`score` என்னும் மாறியில் இந்த மதிப்பு தற்காலிகமாக சேமிக்கப்படும்.பின்னர் ஒவ்வொரு மதிப்பெண்ணும் 80 ஐ விட அதிகமாக உள்ளதா என சோதிக்கப்படும்.பின்னர் 80 ஐ விட அதிகமான மதிப்பெண்கள் சேகரிக்கப்பட்டு வரிசைக்கு அனுப்பப்படும்.
 
 ```ruby
 test_results = {
@@ -37,13 +37,12 @@ good_students = test_results.select do |student, score|
 end
 ```
 
-Here we have a test\_results hash that contains a student’s name and their test score. We can use the select method to grab each student and their score, for every student that scored higher than 80 points. If we were to run this, our good\_students hash would look like this:
+இங்க எங்களிடம் மாணவர்களது பெயர் மற்றும் மதிப்பெண்களைக் கொண்ட test_results எனப்படும் எண்ணிம அடைவு உள்ளது.80   மதிப்பெண்களுக்கு அதிகமாகப் பெற்ற மாணவர்களையும் அவர்களது மதிப்பெண்களையும் பெற select என்னும் முறையினை நாங்கள் பயன்படுத்த முடியும்.இதனை நாங்கள் செயற்படுத்தும் போது good_students என்ற எண்ணிம அடைவு இப்படி இருக்கும்.
 
 ```ruby
 $ good_students
 => {"Jane"=>95, "Adam"=>99, "Sue"=>89, "Kim"=>91}
 ```
 
-You can imagine a program that runs simple select methods for hundreds of students in many classes in order to group students by their grades. Ruby is useful for sorting, counting, classifying and organizing data. It would take a person many hours to organize hundreds of students by grade and name, but a good program can do it almost instantly!
+வகுப்பிலுள்ள நூற்றுக்கணக்கான மாணவர்களை அவர்களது மதிப்பெண்களின் அடிப்படையில் வகைப்படுத்த ஒரு எளிய select  முறை உபயோகப்படுவதைக் நீங்கள் கற்பனை செய்து பாருங்கள். தரவுகளை வரிசைப்படுத்த,எண்ணிக்கையை பெற ,வகைப்படுத்த மற்றும் ஒழுங்கமைக்க ரூபி பயன்படும். நூற்றுக்கணக்கான மாணவர்களை அவர்களது பெயர் மற்றும் மதிப்பெண்களின் அடிப்படையில் வகைப்படுத்த ஒரு மனிதனுக்கு பல மணி நேரங்கள் எடுக்கும் ஆனால் ஒரு சிறந்த கணணி நிரல் உடனடியாக இதனைச் செய்து முடிக்கும்.
 
-<div style="height:30px;"></div>
