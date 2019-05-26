@@ -29,26 +29,20 @@ __பாடம் 2 - எண்கள்__
   `=> 2`
 
 
-8) A wizard carries two numbers (one even and one odd)
-in each hand. He won't open his hands to show you, but
-he will let you use modulo. Your task is to find out
-which hand holds an even number, and which holds the odd.
+8)ஒரு மந்திரவாதி தன் ஒவ்வொரு கையிலும் இரண்டு இலக்கங்களை கொண்டுள்ளான் (ஒன்று இரட்டை எண் மற்றது ஒற்றை எண்). அவர் தன் கைகளை திறந்து உங்களுக்கு அவற்றை காட்டப்போவது இல்லை. ஆனால் அவர் உங்களை modulo முறையை பாவிக்க அனுமதிக்கிறார். உங்களுடைய பணி என்னவென்றால் எந்த கையில் இரட்டை எண் மற்றும் ஒற்றை எண் உள்ளது என்பதை கண்டு பிடிப்பதாகும்.
 
+நாங்கள் ஒவ்வொரு இலக்கத்தையும் x என குறியிட்டால் நாம் modulo இனை பயன்படுத்தலாம். x % 2 == 0 உண்மை(true) என்றால் இது ஒரு இரட்டை எண்.                        x % 2 == 0 என்பது தவறு என்றால் இது ஒரு ஒற்றை எண். 
 
-If we mark each number as "X" we can use modulo:
-if `x % 2 == 0` is `true`, it’s an even number.
-if `x % 2 == 0` is `false`, it’s an odd number.
 
 <br />
-__Chapter 3 - சரங்கள்__
+__பாடம் 3 - சரங்கள்__
 
 
 1) puts "இதன் விடை" + " என்னவாக " + "வெளிப்படும் ?"
 இதன் விடை என்னவாக வெளிப்படும்?
 `=> nil`
 
-The above puts method concatenated the strings, putting
-the result to the screen and returning nil.
+மேல்கொடுக்கப்பட்ட put முறையானது சரங்களை ஒன்றிணைத்து திரையில் விடையை காண்பித்து வெறுமையாக திரும்பிகிறது
 
 2) "This string minus" - "That string"
 ```ruby
@@ -56,8 +50,7 @@ NoMethodError: undefined method `-' for
 "This string minus":String
 ```
 
-There is no '-' method for Strings, so the operation
-cannot be done. Remember, `-` is for numbers!
+சரங்களுக்கு என எந்த '-'  முறையும்(method) இல்லை. எனவே இந்த செயட்பாடு செயட்படுத்த பட முடியாது. ஞாபகத்தில் வைத்திருக்கவும் – என்பது இலக்கங்களுக்கு (numbers) மாத்திரமே!
 
 3) `"1234.55".to_i`
   `=> 1234`
@@ -76,51 +69,42 @@ cannot be done. Remember, `-` is for numbers!
   => nil
   ```
 
-7) Why might it be useful that the 'to integer' (to_i)
-method return zero on strings that can’t be represented
-as numbers?
+7)இலக்கங்களாக(numbers ) குறிப்பிட முடியாத வெளியீடான பூஜியத்தை சரத்தின் மேல் தந்தும் ஏன் 'to integer' (to_i) முறையானது பயனுள்ளதாக கருதப்படுகிறது?  
 
-"to_i" can still be called on a string without numbers,
-and so it returns a zero, noting the successful call
-(no error) and the value zero, which could represent
-zero numbers in the string.
+"to_i" இலக்கங்கள் இல்லாமல் கூட இன்னும் சரங்களால் அழைக்கப்படலாம், மேலும் இது பூஜியத்தை வெளியீடாக தரும். இந்த குறித்த வெற்றிகரமான அழைப்பு மற்றும் பூசிய மதிப்பால் சரத்தில் பூசிய இலக்கங்களை குறித்து காட்ட முடியும்.
 
-8) What do you think the length method does?
+8)Length method என்ன செய்கின்றது என நினைக்கிறீர்கள்?
 `"Count".length`
   `=> 5`
-Counts the number of letters or items in the string.
+சரத்திலுள்ள எழுத்துக்களின் எண்ணிக்கையை அல்லது உருப்படிகளை கணக்கிடுகிறது.
 
-9) How about the split method?
+9)split method பற்றி என்ன நினைக்கின்றீர்கள்?
 `"Count".split("")`
   `=> ["C", "o", "u", "n", "t"]`
 
-Calling the 'split' method with no space ("") as the
-argument causes the string to be split at each character
-and placed inside of an array.
+'split' முறையினை இடைவெளிகளின்றி ("") பயன்படுத்தும் போது சரம் ஒன்றின் ஒவ்வொரு எழுத்துக்களையும் தனித்தனியாக வரிசை ஒன்றில் பெற முடியும்.
 
-10) What do you think slice does?
+10)10.	துண்டுகள் (slice) என்ன செய்கின்றன என நினைகிறீர்கள்?
 `"Count".slice(2)`
   `=> "u"`
+  
+Slice முறையினூடாக அனுப்பப்படும் கடடலைக்கு அமைவாக சரமொன்றின் எழுத்துக்களின் குறியீட்டின் அடிப்படையில் எழுத்து தேர்வு செய்யப்படும். இங்கே குறியீடு 2 ஆக்கவுள்ள எழுத்து U ஆகும்.
 
-Slice grabs the character from the index argument
-passed in, which in this case is an index of 2. The
-letter "u" is at index 2 in our string "Count".
 string:  ["C", "o", "u", "n", "t"]
 indexes: [ 0 ,  1 ,  2 ,  3 ,  4 ]
 
 
 <br />
-__Chapter 4 - Variables__
+__பாடம் 4 - மாறிகள்__
 
 
-1) Store the value of 54 / 3 into the variable x. What
-is the value of x?
+1) x என்னும் மாறியில் 54 / 3 என்ற பெறுமதி சேமித்து வைக்கப்பட்டிருந்தால் x இன் பெறுமதி என்ன?
   `x = 54 / 3`
   `=> 18`
 
-2) Give the value of x (from problem 1) to y, a new
-variable. Now make x equal to itself divided by 3. What’s
-the value of x? What’s the value of y?
+2) மாறி x இன் பெறுமதியை புதிய மாறி y இற்கு வழங்குக ,பின்னர் மாறி  x  இணை 3 ஆல் வகுக்குக 
+. இப்போது மாறி x இன் பெறுமதி என்ன y இன் பெறுமதி என்ன ?
+
   ```ruby
   y = x
   => 18  # y is assigned the x value, 18
@@ -128,21 +112,20 @@ the value of x? What’s the value of y?
   => 6   # x is now the value of 18 / 3
   ```
 
-3) What if we performed some math on our variables?
-If we set x to 12, what’s x divided by 3?
+3) நாம் நம் மாறிகளில்சில கணித செயன் முறைகளை செய்து பார்த்தால் என்ன? X க்கு பெறுமானம் 12 கொடுபோம். இதனை இப்போது 3 ஆல் வகுத்தால் பெறுமானம் என்னவாக இருக்கும்?
   ```ruby
   x = 12
   x / 3
   => 4
   ```
 
-4) What’s the value of x now?
+4)இப்போது xன் மதிப்பு என்ன?
   `=> 12`
-  When we divided X by 3, we didn't store the result, so X's value does not change since it was assigned 12.
+  நாங்கள் x இனை  3ஆல் வகுக்கும் போது வரும் விளைவை சேமித்து  வைக்கவில்லை. அதனால் Xனுடைய மதிப்பு மாறாமல் முன்பு   வழங்கப்பட்ட அதே 12 என்ற மதிப்பையே கொண்டிருக்கும்.
 
 
 <br />
-__Chapter 5 - If and Else__
+__பாடம் 5 - If and Else__
 
 
 1) Is `3 > 5` ?
@@ -166,7 +149,7 @@ __Chapter 5 - If and Else__
 7) `10.object_id == 10.object_id`
   `=> true`
 
-What about strings?
+இந்த சரங்களைப் பற்றி?
 8) `"dog" == "cat"`
   `=> false`
 
@@ -179,27 +162,22 @@ What about strings?
   => false
   # Numbers have object id's that don't change.
   ```
-Everytime a string is created, however, a new `object_id` is created for that string.
+ஒவ்வொரு முறையும் சரம் உருவாக்கபடுகிறது. எப்படியோ அந்த சரத்துக்குரிய ஒரு புதிய  object_id உருவாக்கப்பட்டுவிடுகிறது.
 
 <br />
-__Chapter 6 - Loops__
+__பாடம் 6  - Loops__
 
 
-1) What’s the current value of the time variable?
+1) நேர மாறியின்  தற்போதைய மதிப்பு என்ன??
 `=> 8`
 
-Even though our last value outputted was 7, the next
-code block (current_time = current_time + 1) is executed,
-and so our variable increments by 1 to equal 8.
+எமது இறுதி விளைவு 7 ஆக இருந்தாலும் அடுத்த குறியீட்டு தொகுதி செயட்படுத்தபட்டது. (current_time = current_time + 1), மேலும் எமது மாறிகள் 1 ஆல் அதிகரித்து 8 க்கு சமமாக மாறியுள்ளது.
 
 <br />
-__Chapter 7 - Collections__
+__பாடம் 7 - Collections__
 
 
-1) Create a hash for the Wizard’s magic bag. Inside the
-bag, we’ll put 3 frogs, 5 herbs, and 10 scrolls. Assign
-the hash to the variable "bag".
-What does your hash look like?
+1)மந்திரவாதியோருவரின் மந்திர கைப்பைக்கு ஒரு எண்ணிம அடைவை உருவாக்கவும். நாம் பையினுள் 3 தவளை, 5 மூலிகைகள் , மற்றும் சுருள்களை போடுவோம். பைக்கு ஒரு எண்ணிம அடைவை எழுதுங்கள்.இப்போது உங்களுடைய எண்ணிம அடைவு எவ்வாறு காட்சியளிக்கும்?
 
   ```ruby
   bag = {
@@ -209,12 +187,7 @@ What does your hash look like?
   }
   ```
 
-2) Remember, hashes consist of key value pairs of any
-data, not just numbers. Let’s add a wizard’s spell and
-its result (which the wizard can never seem to remember).
-Add a spell to our wizard’s bag with the key: "shazam"
-and the value "turns subject into a frog".
-Now what's in our bag?
+2)ஞாபகத்தில் வைத்திருக்கவும், எண்ணிம அடைவானது இலக்கங்களை மட்டும் அன்றி எந்தவொரு தரவுகளின் முக்கிய மதிப்பு சோடிகளை உள்ளடக்கி இருக்கும். மந்திரவாதியின் மந்திரத்தையும் அதன விளைவையும் சேர்ப்போம் (இது மந்திரவாதியின் நினைவில் ஒருபோதும் இருக்காது). மந்திரவாதியின் பைக்குள் "shazam" எனும் மந்திர சொல்லை சேர்க்கவும். மேலும் இந்த மதிப்பு எந்த பொருளையும் தவளையாக மாற்றும். இப்போது எமது பையினுள் என்ன உள்ளது?
 
   ```ruby
   bag["shazam"] = "turns subject into a frog"
@@ -225,21 +198,16 @@ Now what's in our bag?
       "shazam" => "turns subject into a frog"}
   ```
 
-3) Our wizard has a change of heart and decides he never
-wants to turn anyone into a frog. How can we remove the
-spell "shazam" from our wizard bag?
+3)எங்களுடைய மந்திரவாதி இனி யாரையும் எப்போதும் தவளையாக மாற்ற விரும்பவில்லை. ஆகவே நாம் எவ்வாறு "shazam" எனும் மந்திரத்தை மந்திரவாதியின் பையினுள் இருந்து நீக்கலாம்?
 
   ```ruby
   bag.delete("shazam")
   => "turns subject into a frog"
   ```
 
-4) Our wizard has recently acquired 3 different types of
-potions. 4 orange potions, 5 blue potions and 7 red
-potions. How might we add another hash of potions to our
-bag?
-Hint: remember that we can have collections within a
-collection.
+4) 4.	எமது மந்திரவாதி சமீபத்தில் மூன்று வெவ்வேறு வகையான போஷன் வாங்கியுள்ளார். 4 ஆரஞ் போஷன், 5 நீல போஷன் மற்றும் 7 சிவப்பு போஷன். நாம் இப்போது எமது பைக்குள் எவ்வாறு வேறு வகையான எண்ணிம அடைவு போஷனை சேர்க்கலாம்? 
+
+குறிப்பு : collection இற்குள் collections களை நாம் வைத்திருக்கலாம் என்பதை நினைவில்  வைத்திருங்கள்.
 
   ```ruby
   bag["potions"] = {
@@ -259,13 +227,9 @@ collection.
      }
   ```
 
-5) Now that our bag has four keys (frogs, herbs, scrolls
-and potions), we can use these keys to access our data.
-In order to make a new spell, our wizard needs 2 frogs,
-3 herbs, 1 scroll and 2 blue potions. How can we remove
-these items from our hash?
-Hint: We can set the value of a key item to itself, minus
-how many items removed.
+5)இப்போது எமது பைக்குள் நான்கு சாவிகள் உள்ளன(தவளை,மூலிகை,சுருள், போஷன் ). நாம் இவற்றை பாவித்து எமது தரவுகளை அணுகலாம். ஒரு புதிய மந்திரத்தை உருவாக்க எமது மந்திரவாதிக்கு 2 தவளைகள், 3 மூலிகைகள், 1 சுருள் மற்றும் 2 நீல போஷன்தேவைப்படுகிறது. இவற்றை எவ்வாறு எமது எண்ணிம அடைவில் இருந்து நாம் நீக்கலாம்?
+
+குறிப்பு : நாங்கள் சவிக்கலுக்கு உரிய மதிப்புக்களை வழங்க முடிவதோடு நீக்கப்பட்ட உருப்படிகளை கழிக்கவும்  
 
   ```ruby
   bag["frogs"] = bag["frogs"] - 2
@@ -290,10 +254,10 @@ how many items removed.
   ```
 
 <br />
-__Chapter 8 - Methods__
+__பாடம் 8 - Methods__
 
 
-1) What is the name of the method below?
+1)கீழ் கொடுக்கபட்டுள்ள முறையின் (method) பெயர் என்ன?
   ```ruby
    def multiply(num1,num2)
      num1 * num2
@@ -301,7 +265,7 @@ __Chapter 8 - Methods__
   => multiply
   ```
 
-2) How many arguments does this method have?
+2)எத்தனை வாதங்களை இந்த முறை கொண்டுள்ளது
   ```ruby
   def meeting(place, time, day)
     ...
@@ -309,8 +273,7 @@ __Chapter 8 - Methods__
   => 3
   ```
 
-3) What does this method return when called?
-(What's its output?)
+3)இந்த முறை எதை வெளியீடு செய்யும் ? (இதன் வெளியீடுகள் என்ன?)
   ```ruby
   def calculus
     numbers = (25 * 37) / 42
@@ -321,8 +284,7 @@ __Chapter 8 - Methods__
   ```
 Ruby methods return their last line by default
 
-4) Write a method that takes a word as an argument.
-Make the method return the word and the string "is awesome!".
+4)வாதமாக எடுத்துக்கொள்ள கூடிய ஒரு  வார்த்தையை கொண்ட முறையை எழுதுக. இந்த முறையை பாவித்து அந்த வார்த்தையை  வெளியீடாக கிடைக்குமாறு செய்யவும், மீளும் சரம் "is awesome!" என வர வேண்டும்.
 
   ```ruby
   def awesomify(word)
@@ -332,10 +294,10 @@ Make the method return the word and the string "is awesome!".
 
 
 <br />
-__Chapter 9 - Enumerables__
+__பாடம் 9 - Enumerables__
 
 
-1) What numbers will the following code output?
+1) எந்த இலக்கங்கள்  பின்வரும் தொகுதியின் வெளியீடுகளாக அமையும்?
   ```ruby
      [1,2,3,4,5].each { |num| puts num if num.odd? }
   1
@@ -344,7 +306,7 @@ __Chapter 9 - Enumerables__
   => [1, 2, 3, 4, 5]
   ```
 
-2) What would this each method output from this string?
+2)இந்த சரத்திலிருந்து ஒவ்வொரு முறைக்கான வெளியீடு என்னவாக இருக்கும்?
   ```ruby
   "ThisdmakesdmoredsensedwithoutdD's".split("d").each {
     |letter| puts letter
@@ -359,7 +321,7 @@ __Chapter 9 - Enumerables__
   => ["This", "makes", "more", "sense", "without", "D's"]
   ```
 
-3) What does select do for this hash?
+3)தேர்வு முறையானது  எண்ணிம அடைவுக்கு என்ன செய்கிறது?
   ```ruby
      food = {
        "apple" => "fruit",
@@ -372,14 +334,14 @@ __Chapter 9 - Enumerables__
   => {"carrot"=>"vegetable"}
   ```
 
-4) What will map do?
+4) 4.	இங்கு தொர்புரு அணி (map) என்ன செய்யும்?
   ```ruby
      numbers = [1,2,3,4,5]
      numbers.map { |num| num * 5 }
   => [5, 10, 15, 20, 25]
   ```
 
-5) Now what is the value of numbers?
+5)இப்போது இந்த இலக்கங்களின் பெறுமானம் என்ன?
   ```ruby
   => [1, 2, 3, 4, 5]
   ```

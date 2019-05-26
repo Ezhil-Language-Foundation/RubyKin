@@ -35,6 +35,6 @@ String சார்ந்த மாற்ற செயல்பாடுகள�
 
 [:try\_convert, :allocate, :new, :superclass, :freeze, :===, :==, :<=>, :<, :<=, :>, :>=, :to\_s, :included\_modules, :include?, :name, :ancestors, :instance\_methods, :public\_instance\_methods, :protected\_instance\_methods, :private\_instance\_methods, :constants, :const\_get, :const\_
 
-and many more...
+இவற்றோடு இன்னும் பல..........
 
 <div style="height:30px;"></div>
