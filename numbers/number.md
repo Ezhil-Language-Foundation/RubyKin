@@ -12,7 +12,7 @@
 > செயல்பாடு = Operation 
 > ஏரணம் = logic 
 
-ரூபி-யால் கணித, ஏரணச் செயல்பாடுகளைச் செய்யும் ஆற்றல்பெற்றது. 
+ரூபி கணித, ஏரணச் செயல்பாடுகளைச் செய்யும் ஆற்றல்பெற்றது. 
 `எ.கா.` 
 
 - **`+`** கூட்டல் 
@@ -29,22 +29,20 @@
 
 இக்கட்டளைகளை ரூபி இயக்கியில் நீங்கள் செயல்படுத்த, ரூபி-யை உங்கள் கணினியில் நிறுவ வேண்டும். 
 
-__Installing Ruby__ 
+__ரூபியினை நிறுவுதல் __ 
 
-If you’re using Mac OS X, Ruby is already installed. Hooray! Just open your _Terminal_ application. To find terminal you can click the magnifying glass in the top right corner of your screen, then type Terminal and click the first result. (Or you can navigate to Applications - Utilities - Terminal and double click). 
+நீங்கள்  OS X இணை பயன்படுத்துகிறீர்கள் என்றால், அதில் ரூபி ஏற்கனவே நிறுவப்பட்டிருக்கும். இப்போது உங்களுடைய Terminal application திறக்கவும். இதனை கண்டுபிடிக்க திரையின் வலது மேல் மூலையில் உள்ள magnifying glass(பூதக் கண்ணாடி) பொத்தானை அழுத்தவும். பின் Terminal என தட்டச்சு செய்து முதலாவது விளைவை தெரிவு செய்க. (இல்லையெனில் நீங்கள்  Applications - Utilities - Terminal என்பதன் ஊடாக சென்று இரு தடவை terminal ல் அழுத்தி திறக்க முடியும்.)
 
 ![to open Terminal on a Mac](http://rubykin.com/images/terminal_directions.png) 
 
-If you’re using Linux, open up a shell, type irb and hit enter. 
-And if you’re on Windows, open fxri from the Ruby section of your Start Menu. 
+நீங்கள் Linux பாவிப்பவாராக இருந்தால், ஒரு shell இனை திறந்து, irb என தட்டச்சு செய்து enter இணை அழுத்தவும். மேலும் நீங்கள் Windows பாவிப்பவர் என்றால், Ruby பகுதியிலுள்ள Start Menuல் உள்ள fxri இனை திறக்கவும். மூன்றாம் தெரிவாக Repl.it (http://repl.it/languages/Ruby) என்பதனை தேடிப்பார்க்கவும். இது ஒரு அற்புதமான இலகுவான கருவி. இது தேடல் பொறிகளில் code எழுத உங்களை அனுமதிக்கிறது. இங்கு நிறுவுதல் அவசியம் இல்லை.
+ 
 
-As a third option, check out Repl.it (http://repl.it/languages/Ruby). This is a pretty fantastic tool that allows you to type code into your web browser. No installation required! 
-
-Next, type the letters `irb` into the terminal or shell screen and hit enter. 
+அடுத்து irb என terminal அல்லது shell திரையில் தட்டச்சு செய்து enter இனை அழுத்தவும். 
 
 __IRB என்றால் என்ன?__ 
 
-IRB stands for Interactive Ruby Shell. An Interactive Ruby Shell is like a little secret fort located inside your computer. You can use your IRB environment to play around with Ruby and learn different commands. Open up IRB (from a shell window or using www.repl.it/languages/Ruby and try typing some of these simple math calculations to see what the computer returns. Or try your own! 
+IRB என்பது Interactive Ruby Shell என்பதன் சுருக்கம் ஆகும். IRB என்பது உங்கள் கணினியில் உள்ள ஒரு சிறு இரகசிய கோட்டைபோன்றது. நீங்கள் உங்கள் IRB சூழ்நிலையை பயன்படுத்தி Ruby பற்றி அறிந்து கொள்ளவும் மற்றும் வெவ்வேறான  கட்டளைகளை தெரிந்து கொள்ளவும் முடியும். IRB யை திறந்து (shell window அல்லது www.repl.it/languages/Ruby பாவித்து திறக்கவும்) கீழ் தரப்படமாதிரி சில எளிய கணகீடுகளை தட்டச்சு செய்து என்ன மாதிரியான வெளியீடுகளை கணணி தருகின்றது என்பதை பார்க்கவும். அல்லது சுயமாக முயற்சி செய்து பார்க்கவும். 
 
 ```ruby 
 2 + 2 
@@ -53,21 +51,19 @@ IRB stands for Interactive Ruby Shell. An Interactive Ruby Shell is like a littl
 7 / 4 
 ``` 
 
-Curious about the `=>` arrows? Ruby engineers like to call these hash rockets. You will see that typing `3 + 2` or any other thing into IRB will always return a value, signified by the pointer `=>`. 
+Arrows => பற்றி அறிய ஆர்வமாக உள்ளதா? Ruby பொறியியலாளர்கள் இதனை எண்ணிம அடைவு ராக்கட் என அழைக்க விரும்புவார்கள். IRBனுள் 3 + 2 என தட்டச்சு செய்தாலோ அல்லது வேறு வகையான காரணிகளை உள்ளீடு செய்தாலோ எப்போதும் அது சுட்டியால் => குறிப்பிடப்பட்ட ஒரு மதிப்பை விளைவாக தரும்.
 
-/> 
-__சிறு துளி கணிதம்__ 
+/> __சிறு துளி கணிதம்__ 
 
-ரூபி போன்ற நிரல்மொழிகள் _பல மடங்கு_ பெரிய கணித கணக்குகளை இயக்கவல்லது. நமக்குச் சலிக்கும் ஆனால், கணினி சலிக்காமல், சளைக்காமல் வேலை செய்து விடை சொல்லும். இந்தப் பக்கத்தில் அடுத்து, வகுத்தல்மீதம் (modulo), மற்றும் அடுக்குக்குறி (exponent) ஆகிய கணித செயல்பாடுகளை ரூபி கையாள்கிறது என்று பார்ப்போம்! 
+ரூபி போன்ற நிரல்மொழிகள் பல மடங்கு பெரிய கணித கணக்குகளை இயக்கவல்லது. நமக்குச் சலிக்கும் ஆனால், கணினி சலிக்காமல், சளைக்காமல் வேலை செய்து விடை சொல்லும். இந்தப் பக்கத்தில் அடுத்து, வகுத்தல்மீதம் (modulo), மற்றும் அடுக்குக்குறி (exponent) ஆகிய கணித செயல்பாடுகளை ரூபி கையாள்கிறது என்று பார்ப்போம்! 
 
 
 __அடுக்குக்குறி__ 
 
-அடுக்குக்குறி ஒர் எண் எவ்வளவுமுறை பெருக்கப்பட வேண்டும் என்று கூறும். 
-`எ.கா.` 2 பெருக்கல் 2 என்பது 4. 4 பெருக்கல் 2 என்பது 8. அதாவது 2^3 என்றால் 2 பெருக்கல் 2 பெருக்கல் 2 , என்பதின் விடை 8 
+அடுக்குக்குறி ஒர் எண் எவ்வளவுமுறை பெருக்கப்பட வேண்டும் என்று கூறும். எ.கா. 2 பெருக்கல் 2 என்பது 4. 4 பெருக்கல் 2 என்பது 8. அதாவது 2^3 என்றால் 2 பெருக்கல் 2 பெருக்கல் 2 , என்பதின் விடை 8
 
-அடக்குக்குறி பற்றி அறிந்தால்தான், ரூபியில் நிரலாக்கம் செய்யலாம் என்றில்லை. 
-ரூபி இரண்டு பெருக்கல்குறியை கொண்டு அடுக்குக்குறியை குறியிடும். 
+அடுக்குக்குறி பற்றி அறிந்தால்தான், ரூபியில் நிரலாக்கம் செய்யலாம் என்றில்லை. ரூபி இரண்டு பெருக்கல்குறியை கொண்டு அடுக்குக்குறியை குறியிடும்.
+ 
 
 
 ```ruby 
