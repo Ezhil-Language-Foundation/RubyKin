@@ -1,4 +1,3 @@
-39.7895% => /Users/muthu/devel/RubyKin/numbers/number.md
 45.7143% => /Users/muthu/devel/RubyKin/appendix/contact.md
 47.7941% => /Users/muthu/devel/RubyKin/strings/practice.md
 51.7241% => /Users/muthu/devel/RubyKin/enumerables/practice.md
@@ -10,6 +9,7 @@
 75.8389% => /Users/muthu/devel/RubyKin/enumerables/select.md
 76.2821% => /Users/muthu/devel/RubyKin/enumerables/hash.md
 76.8224% => /Users/muthu/devel/RubyKin/variables/variable.md
+77.3218% => /Users/muthu/devel/RubyKin/numbers/number.md
 78.9409% => /Users/muthu/devel/RubyKin/loops/loop.md
 79.2453% => /Users/muthu/devel/RubyKin/enumerables/enumerable.md
 84.0226% => /Users/muthu/devel/RubyKin/methods/functions.md
@@ -28,4 +28,4 @@
 93.2203% => /Users/muthu/devel/RubyKin/what_is_programming/intro.md
 93.3333% => /Users/muthu/devel/RubyKin/files/the_end.md
 100.0000% => /Users/muthu/devel/RubyKin/SUMMARY.md
-completion => 76.563972%
+completion => 77.815050%
